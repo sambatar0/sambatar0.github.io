@@ -28,6 +28,20 @@ body {
     text-align: center;
 }
 
+/* Logo */
+.logo-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.logo-container img {
+    max-width: 300px;
+    width: 60%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* leichter Schatten */
+    border-radius: 8px;
+}
+
 /* Überschriften */
 h1 {
     font-family: 'Cormorant Garamond', serif;
@@ -52,6 +66,23 @@ p {
     text-align: justify;
 }
 
+/* Buttons */
+button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: #3e3e3e;
+    color: #f5efe6;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+button:hover {
+    background-color: #2c2c2c;
+}
+
 /* Navigation */
 .nav {
     position: fixed;
@@ -71,27 +102,18 @@ p {
     opacity: 0.5;
 }
 
-/* Button */
-button {
-    margin-top: 30px;
-    padding: 12px 28px;
-    background-color: transparent;
-    border: 1px solid #3e3e3e;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-button:hover {
-    background-color: #3e3e3e;
-    color: #f5efe6;
-}
-
 /* Footer */
 .footer {
     margin-top: 80px;
     font-size: 14px;
     opacity: 0.6;
+}
+
+/* Abschnitts-Hintergründe */
+.section {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: #f9f7f1;
 }
 
 /* Mobile Anpassungen */
@@ -114,7 +136,11 @@ button:hover {
         margin-left: 10px;
     }
     .container {
-        padding: 40px 5%;
+        padding: 30px 5%;
+    }
+    button {
+        width: 80%;
+        padding: 12px 0;
     }
 }
 </style>
@@ -131,6 +157,10 @@ button:hover {
 
 <div class="container">
 
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/sambatar0/sambatar0.github.io/main/LOGO_transparent.png" alt="Logo">
+    </div>
 
     <!-- Hauptüberschrift -->
     <h1>HYGIENE • COMPLIANCE</h1>
@@ -176,6 +206,7 @@ button:hover {
         Ich freue mich auf Deine Nachricht!<br>
         <strong>Email: hyg.sambataro@web.de</strong><br>
         <strong>Instagram: @hygiene.compliance</strong></p>
+        <button>Jetzt kontaktieren</button>
     </div>
 
     <div class="footer">
