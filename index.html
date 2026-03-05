@@ -5,117 +5,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hygiene.compliance</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@200;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
 
 <style>
-    /* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-/* Grundfarben & Schrift */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f5efe6;
-    color: #3e3e3e;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
-}
-    
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 40px;
-    text-align: center;
+
+/* Smooth Scroll */
+html{
+scroll-behavior:smooth;
 }
 
-/* Überschriften */
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    text-align: center;
+/* Grundlayout */
+
+body{
+margin:0;
+background:#f5efe6;
+color:#3e3e3e;
+font-family:'Inter',sans-serif;
+font-weight:300;
+line-height:1.8;
 }
 
-h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 600;
-    margin-top: 80px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Paragraphen */
-p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+.container{
+max-width:900px;
+margin:auto;
+padding:80px 40px;
 }
 
 /* Navigation */
-.nav {
-    position: fixed;
-    top: 40px;
-    right: 60px;
-    font-size: 14px;
-    letter-spacing: 1px;
+
+.nav{
+position:fixed;
+top:40px;
+right:60px;
+font-size:14px;
+letter-spacing:1px;
 }
 
-.nav a {
-    text-decoration: none;
-    color: #3e3e3e;
-    margin-left: 30px;
-    transition: opacity 0.3s ease;
-    position: relative;
-
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 1px;
-    background: #3e3e3e;
-    transition: width 0.3s ease;
+.nav a{
+text-decoration:none;
+color:#3e3e3e;
+margin-left:30px;
+position:relative;
 }
 
-.nav a:hover::after {
-    width: 100%;
-}
+.nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0;
+height:1px;
+background:#3e3e3e;
+transition:0.3s;
 }
 
-.nav a:hover {
-    opacity: 0.5;
+.nav a:hover::after{
+width:100%;
+}
+
+/* Überschriften */
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:48px;
+font-weight:300;
+letter-spacing:1px;
+text-align:center;
+margin-bottom:20px;
+}
+
+h2{
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+font-weight:600;
+text-align:center;
+margin-bottom:30px;
+}
+
+/* Text */
+
+p{
+font-size:18px;
+max-width:600px;
+margin:auto;
+}
+
+/* Sektionen */
+
+.section{
+padding:120px 0;
+}
+
+/* Workflow */
+
+.workflow-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:60px;
+max-width:700px;
+margin:auto;
+}
+
+.workflow-item h3{
+font-family:'Cormorant Garamond',serif;
+font-size:24px;
+font-weight:400;
+margin-bottom:10px;
+text-align:center;
+}
+
+.workflow-item p{
+text-align:center;
 }
 
 /* Button */
-button {
-    margin-top: 30px;
-    padding: 12px 28px;
-    background-color: transparent;
-    border: 1px solid #3e3e3e;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+button{
+margin-top:30px;
+padding:12px 28px;
+background:transparent;
+border:1px solid #3e3e3e;
+font-size:14px;
+letter-spacing:1px;
+cursor:pointer;
+transition:0.3s;
 }
 
-button:hover {
-    background-color: #3e3e3e;
-    color: #f5efe6;
+button:hover{
+background:#3e3e3e;
+color:#f5efe6;
 }
 
 /* Footer */
-.footer {
-    margin-top: 120px;
-    font-size: 14px;
-    opacity: 0.6;
+
+.footer{
+margin-top:120px;
+font-size:14px;
+opacity:0.6;
+text-align:center;
 }
 
 </style>
@@ -124,146 +151,216 @@ button:hover {
 <body>
 
 <!-- Navigation -->
+
 <div class="nav">
-    <a href="#about">Ambitionen</a>
-    <a href="#arbeitsweise">Arbeitsweise</a>
-    <a href="#work">Leistungen</a>
-    <a href="#contact">Kontakt</a>
+<a href="#about">Ambitionen</a>
+<a href="#arbeitsweise">Arbeitsweise</a>
+<a href="#work">Leistungen</a>
+<a href="#contact">Kontakt</a>
 </div>
+
 
 <div class="container">
 
-    <h1>HYGIENE  • COMPLIANCE</h1>
-    
-<br>
-    
+<h1>HYGIENE • COMPLIANCE</h1>
+
+<h1>Kunst in Deiner Hand, Hygiene in meiner.<br>
+Damit Deine Kunst Dein Fokus bleibt.</h1>
+
 </div>
 
-    <h1>Kunst in Deiner Hand, Hygiene in meiner.<br>
-    Damit Deine Kunst Dein Fokus bleibt.</h1>
-    <p>
-    
-<br>
-    </p>
 
-    <!-- Über mich -->
-    <div class="section" id="about">
-        <h2><strong>Ambitionen</strong></h2>
-        <p>
-            <br>
-<p style="text-align: justify;">Ich bin <b>staatlich anerkannte Hygienekontrolleurin</b> und verfüge über die Erfahrung, die vorallem für Dich und Dein Handwerk Besonders wertvoll sind.<br>
-            Durch meine Erfahrung im Dienst habe ich ein tiefes Verständnis für gesetzliche Vorgaben, Hygieneauflagen und Kontrollprozesse.<br>
-            Diese Erfahrung ermöglicht es mir, betriebsinterne Verfahren optimal vorzubereiten und höchste Hygienestandards zuverlässig umzusetzen.<br>
-     <br>
+<!-- Ambitionen -->
+
+<section class="section" id="about">
+
+<div class="container">
+
+<h2>Ambitionen</h2>
+
+<p style="text-align:justify">
+
+Ich bin <b>staatlich anerkannte Hygienekontrolleurin</b> und verfüge über die Erfahrung, die vorallem für Dich und Dein Handwerk besonders wertvoll sind.
+
+<br><br>
+
+Durch meine Erfahrung im Dienst habe ich ein tiefes Verständnis für gesetzliche Vorgaben, Hygieneauflagen und Kontrollprozesse.
+
+<br><br>
+
+Diese Erfahrung ermöglicht es mir, betriebsinterne Verfahren optimal vorzubereiten und höchste Hygienestandards zuverlässig umzusetzen.
+
+<br><br>
+
 <strong>Meine Überzeugung:</strong><br>
-    Die Kunst sollte den Künstlern überlassen sein. Du bist der Meister Deines Fachs und ich die meines.<br>
-Ich manage alles rund um das Thema Hygiene; von der Erstellung maßgeschneiderter Hygienepläne über die vollständige Dokumentation für Behörden bis hin zu Schulungen.<br>
-            Hygiene ist für mich mehr als eine gesetzliche Pflicht, vielmehr ist sie ein entscheidendes Qualitätsmerkmal Deines Unternehmens.<br>
-Mit meiner staatlichen Qualifikation und meiner praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.<br>
-    Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
- </p>
+
+Die Kunst sollte den Künstlern überlassen sein. Du bist der Meister Deines Fachs und ich die meines.
+
+<br><br>
+
+Ich manage alles rund um das Thema Hygiene – von der Erstellung maßgeschneiderter Hygienepläne über vollständige Dokumentation für Behörden bis hin zu Schulungen.
+
+<br><br>
+
+Hygiene ist für mich mehr als eine gesetzliche Pflicht – sie ist ein entscheidendes Qualitätsmerkmal Deines Unternehmens.
+
+<br><br>
+
+Mit meiner staatlichen Qualifikation und praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.
+
+<br><br>
+
+Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
+
+</p>
+
 </div>
-    
-    <!-- Leistungen -->
-<section class="workflow" id="arbeitsweise">>
+
+</section>
+
+
+<!-- Arbeitsweise -->
+
+<section class="section" id="arbeitsweise">
+
 <div class="container">
-<h2><strong>Arbeitsweise</strong></h2>
-<br>
+
+<h2>Arbeitsweise</h2>
+
 <div class="workflow-grid">
 
 <div class="workflow-item">
-<span class="number"></span>
+
 <h3>Bestandsaufnahme</h3>
-<div class="line"></div>
+
 <p>
 Jede Zusammenarbeit beginnt mit einer gründlichen Analyse Deines Betriebes.
-Ich nehme mir die Zeit, Deine Abläufe, Räumlichkeiten und bestehenden
-Hygienekonzepte genau zu verstehen, ohne vorschnelle Urteile und mit offenem Blick.<br>
+Ich nehme mir die Zeit Deine Abläufe, Räumlichkeiten und bestehenden
+Hygienekonzepte genau zu verstehen.
 </p>
+
 </div>
 
+
 <div class="workflow-item">
-<span class="number"></span>
+
 <h3>Maßgeschneiderte Konzepte</h3>
-<div class="line"></div>
+
 <p>
-Auf Basis der Bestandsaufnahme entwickle ich individuelle Hygienepläne,
-die exakt auf Deinen Betrieb zugeschnitten sind.<br>
-Praxisnahe, umsetzbare Lösungen, die Dich und Dein Team entlasten statt belasten.<br>
+Auf Basis der Bestandsaufnahme entwickle ich individuelle Hygienepläne
+die exakt auf Deinen Betrieb zugeschnitten sind.
+Praxisnah und umsetzbar.
 </p>
+
 </div>
+
 
 <div class="workflow-item">
-<span class="number"></span>
+
 <h3>Begleitung</h3>
-<div class="line"></div>
+
 <p>
-Wissen schützt. Ich informiere Dich und Dein Team verständlich und praxisnah,
-damit Hygienestandards nicht nur auf dem Papier existieren,
-sondern gelebter Alltag werden. Und das ist einfacher als gedacht.
+Ich informiere Dich und Dein Team verständlich und praxisnah,
+damit Hygienestandards nicht nur auf dem Papier existieren
+sondern gelebter Alltag werden.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
- <div class="section" id="work">
-        <h2><strong>Leistungen</strong></h2>
-        <p>
+
+<!-- Leistungen -->
+
+<section class="section" id="work">
+
+<div class="container">
+
+<h2>Leistungen</h2>
+
 <p>
-            <br>
-     <b><strong>Hygiene-Check Basic „Einfach wissen, wo ich stehe - wir lernen uns kennen“</strong></b><br>
-            <br>
+
+<b>Hygiene-Check Basic</b><br><br>
+
 Kurzer Vor-Ort-Termin im Studio<br>
-Durchsicht von Arbeitsplatz, Instrumenten und sonstiges<br>
+Durchsicht von Arbeitsplatz, Instrumenten und Abläufen<br>
 Ersteinschätzung zur Hygiene & Dokumentation<br>
-Ruhige, verständliche Rückmeldung<br>
-<br>
-<br>
-    <b><strong>Wie geht es weiter? „Sicherheit mit klaren nächsten Schritten“</strong></b><br>
-            <br>
-genaue Durchsicht der Hygienedokumentation<br>
-Schriftliche Zusammenfassung des Vorort Termins<br>
-Konkrete Handlungsempfehlungen<br>
-<br>
-<br>
-    <b><strong>„Ordnung schafft Sicherheit"</strong></b><br>
- <br>
-<span>Erstellung und Überarbeitung von:</span><br>
-- Hygieneplänen<br>
-- Reinigungs- und Desinfektionsplänen<br>
-- Aufbereitungsnachweisen<br>
-- Inklusive Verweise auf Rechtsvorschriften und Verordnungen<br>
-<br>
-<br>
-            <b><strong>Was es sonst noch gibt „Hygiene verständlich erklärt“</strong></b><br>
-            <br>
-Individuelle Schulung (Einzelperson oder Team)<br>
-Praxisnah & ohne Fachjargon<br>
-Raum für Fragen und Unsicherheiten<br>
-            
-        </p>
-    </div>
+Ruhige verständliche Rückmeldung
 
-    <!-- Kontakt -->
-    <div class="section" id="contact">
-        <h2><strong>Kontakt</strong></h2>
-        <p>
-            Hast Du Fragen zu meinen Leistungen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br>
-            Ich freue mich auf Deine Nachricht!<br>
-            <br>
-        <strong>Email: hyg.sambataro@web.de</strong><br>
-            <strong>Instagram: @hygiene.compliance</strong><br>
-        </p>
-    </div>
+<br><br><br>
 
-    <div class="footer">
-        © 2026 Alle Rechte vorbehalten
-    </div>
+<b>Wie geht es weiter?</b><br><br>
+
+Genaue Durchsicht der Hygienedokumentation<br>
+Schriftliche Zusammenfassung des Termins<br>
+Konkrete Handlungsempfehlungen
+
+<br><br><br>
+
+<b>Ordnung schafft Sicherheit</b><br><br>
+
+Erstellung oder Überarbeitung von:
+
+<br>
+
+Hygieneplänen<br>
+Reinigungs- und Desinfektionsplänen<br>
+Aufbereitungsnachweisen
+
+<br><br><br>
+
+<b>Hygiene verständlich erklärt</b><br><br>
+
+Individuelle Schulung für Einzelpersonen oder Teams<br>
+Praxisnah ohne Fachjargon<br>
+Raum für Fragen
+
+</p>
 
 </div>
+
+</section>
+
+
+<!-- Kontakt -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<h2>Kontakt</h2>
+
+<p>
+
+Hast Du Fragen zu meinen Leistungen oder möchtest ein unverbindliches Erstgespräch vereinbaren?
+
+<br><br>
+
+<strong>Email:</strong><br>
+hyg.sambataro@web.de
+
+<br><br>
+
+<strong>Instagram:</strong><br>
+@hygiene.compliance
+
+</p>
+
+</div>
+
+</section>
+
+
+<div class="footer">
+
+© 2026 Alle Rechte vorbehalten
+
+</div>
+
 
 </body>
 </html>
-
