@@ -10,6 +10,7 @@
 <style>
 
 /* Smooth Scroll */
+
 html{
 scroll-behavior:smooth;
 }
@@ -29,6 +30,7 @@ line-height:1.8;
 max-width:900px;
 margin:auto;
 padding:80px 40px;
+text-align:center;
 }
 
 /* Navigation */
@@ -74,19 +76,27 @@ text-align:center;
 margin-bottom:20px;
 }
 
+.hero-sub{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+font-weight:300;
+text-align:center;
+margin-top:20px;
+}
+
 h2{
 font-family:'Cormorant Garamond',serif;
 font-size:30px;
 font-weight:600;
 text-align:center;
-margin-bottom:30px;
+margin-bottom:40px;
+scroll-margin-top:120px;
 }
 
 /* Text */
 
 p{
 font-size:18px;
-max-width:600px;
 margin:auto;
 }
 
@@ -94,6 +104,13 @@ margin:auto;
 
 .section{
 padding:120px 0;
+}
+
+/* gleiche Breite für Inhalte */
+
+.content{
+max-width:700px;
+margin:auto;
 }
 
 /* Workflow */
@@ -106,34 +123,13 @@ max-width:700px;
 margin:auto;
 }
 
-.workflow-item h3{
+/* Einheitliche Titel */
+
+.service-title{
 font-family:'Cormorant Garamond',serif;
 font-size:24px;
-font-weight:400;
-margin-bottom:10px;
-text-align:center;
-}
-
-.workflow-item p{
-text-align:center;
-}
-
-/* Button */
-
-button{
-margin-top:30px;
-padding:12px 28px;
-background:transparent;
-border:1px solid #3e3e3e;
-font-size:14px;
-letter-spacing:1px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#3e3e3e;
-color:#f5efe6;
+font-weight:600;
+margin-bottom:15px;
 }
 
 /* Footer */
@@ -150,8 +146,6 @@ text-align:center;
 
 <body>
 
-<!-- Navigation -->
-
 <div class="nav">
 <a href="#about">Ambitionen</a>
 <a href="#arbeitsweise">Arbeitsweise</a>
@@ -159,22 +153,21 @@ text-align:center;
 <a href="#contact">Kontakt</a>
 </div>
 
-
 <div class="container">
 
 <h1>HYGIENE • COMPLIANCE</h1>
 
-<h1>Kunst in Deiner Hand, Hygiene in meiner.<br>
-Damit Deine Kunst Dein Fokus bleibt.</h1>
+<div class="hero-sub">
+Kunst in Deiner Hand, Hygiene in meiner.<br>
+Damit Deine Kunst Dein Fokus bleibt.
+</div>
 
 </div>
 
 
-<!-- Ambitionen -->
-
 <section class="section" id="about">
 
-<div class="container">
+<div class="container content">
 
 <h2>Ambitionen</h2>
 
@@ -219,8 +212,6 @@ Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
 </section>
 
 
-<!-- Arbeitsweise -->
-
 <section class="section" id="arbeitsweise">
 
 <div class="container">
@@ -229,9 +220,9 @@ Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
 
 <div class="workflow-grid">
 
-<div class="workflow-item">
+<div>
 
-<h3>Bestandsaufnahme</h3>
+<div class="service-title">Bestandsaufnahme</div>
 
 <p>
 Jede Zusammenarbeit beginnt mit einer gründlichen Analyse Deines Betriebes.
@@ -241,10 +232,9 @@ Hygienekonzepte genau zu verstehen.
 
 </div>
 
+<div>
 
-<div class="workflow-item">
-
-<h3>Maßgeschneiderte Konzepte</h3>
+<div class="service-title">Maßgeschneiderte Konzepte</div>
 
 <p>
 Auf Basis der Bestandsaufnahme entwickle ich individuelle Hygienepläne
@@ -254,10 +244,9 @@ Praxisnah und umsetzbar.
 
 </div>
 
+<div>
 
-<div class="workflow-item">
-
-<h3>Begleitung</h3>
+<div class="service-title">Begleitung</div>
 
 <p>
 Ich informiere Dich und Dein Team verständlich und praxisnah,
@@ -274,17 +263,15 @@ sondern gelebter Alltag werden.
 </section>
 
 
-<!-- Leistungen -->
-
 <section class="section" id="work">
 
-<div class="container">
+<div class="container content">
 
 <h2>Leistungen</h2>
 
 <p>
 
-<b>Hygiene-Check Basic</b><br><br>
+<span class="service-title">Hygiene-Check Basic</span><br><br>
 
 Kurzer Vor-Ort-Termin im Studio<br>
 Durchsicht von Arbeitsplatz, Instrumenten und Abläufen<br>
@@ -293,7 +280,7 @@ Ruhige verständliche Rückmeldung
 
 <br><br><br>
 
-<b>Wie geht es weiter?</b><br><br>
+<span class="service-title">Wie geht es weiter?</span><br><br>
 
 Genaue Durchsicht der Hygienedokumentation<br>
 Schriftliche Zusammenfassung des Termins<br>
@@ -301,11 +288,9 @@ Konkrete Handlungsempfehlungen
 
 <br><br><br>
 
-<b>Ordnung schafft Sicherheit</b><br><br>
+<span class="service-title">Ordnung schafft Sicherheit</span><br><br>
 
-Erstellung oder Überarbeitung von:
-
-<br>
+Erstellung oder Überarbeitung von:<br>
 
 Hygieneplänen<br>
 Reinigungs- und Desinfektionsplänen<br>
@@ -313,7 +298,7 @@ Aufbereitungsnachweisen
 
 <br><br><br>
 
-<b>Hygiene verständlich erklärt</b><br><br>
+<span class="service-title">Hygiene verständlich erklärt</span><br><br>
 
 Individuelle Schulung für Einzelpersonen oder Teams<br>
 Praxisnah ohne Fachjargon<br>
@@ -326,11 +311,9 @@ Raum für Fragen
 </section>
 
 
-<!-- Kontakt -->
-
 <section class="section" id="contact">
 
-<div class="container">
+<div class="container content">
 
 <h2>Kontakt</h2>
 
@@ -340,12 +323,12 @@ Hast Du Fragen zu meinen Leistungen oder möchtest ein unverbindliches Erstgespr
 
 <br><br>
 
-<strong>Email:</strong><br>
+<strong>Email</strong><br>
 hyg.sambataro@web.de
 
 <br><br>
 
-<strong>Instagram:</strong><br>
+<strong>Instagram</strong><br>
 @hygiene.compliance
 
 </p>
@@ -360,7 +343,6 @@ hyg.sambataro@web.de
 © 2026 Alle Rechte vorbehalten
 
 </div>
-
 
 </body>
 </html>
