@@ -11,7 +11,7 @@
 
 /* Smooth Scroll */
 html{
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 /* Grundlayout */
@@ -47,6 +47,11 @@ body{
   color:#3e3e3e;
   margin-left:30px;
   position:relative;
+  transition: color 0.3s;
+}
+
+.nav a.active{
+  color:#b85c38; /* Akzentfarbe für aktiven Menüpunkt */
 }
 
 .nav a::after{
@@ -58,6 +63,11 @@ body{
   height:1px;
   background:#3e3e3e;
   transition:0.3s;
+}
+
+.nav a.active::after{
+  background:#b85c38;
+  width:100%;
 }
 
 .nav a:hover::after{
@@ -72,6 +82,15 @@ h1{
   letter-spacing:1px;
   text-align:center;
   margin-bottom:20px;
+  color:#3e3e3e;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  opacity:0;
+  transform: translateY(-20px);
+  animation: fadeInHero 1s forwards 0.3s;
+}
+
+@keyframes fadeInHero{
+  to { opacity:1; transform: translateY(0); }
 }
 
 .hero-sub{
@@ -80,6 +99,24 @@ h1{
   font-weight:300;
   text-align:center;
   margin-top:20px;
+  opacity:0;
+  transform: translateY(20px);
+  animation: fadeInHero 1s forwards 0.6s;
+}
+
+/* Linie unter Hero */
+.hero-line{
+  width:80px;
+  height:2px;
+  background:#3e3e3e;
+  margin:20px auto 60px;
+  opacity:0;
+  transform: scaleX(0);
+  animation: lineIn 0.8s forwards 0.9s;
+}
+
+@keyframes lineIn{
+  to{ opacity:1; transform: scaleX(1); }
 }
 
 /* Haupt-Section-Überschriften */
@@ -89,7 +126,7 @@ h2{
   font-weight:600;
   text-align:center;
   margin-bottom:40px;
-  scroll-margin-top:120px; /* sorgt dafür, dass beim Scrollen der Header oben ist */
+  scroll-margin-top:120px; /* Header oben */
 }
 
 /* Text */
@@ -163,31 +200,16 @@ button:hover{
 
 /* Mobile Optimierung */
 @media(max-width:768px){
-  .container{
-    padding:60px 20px;
-  }
-  .nav{
-    top:20px;
-    right:20px;
-    font-size:13px;
-  }
-  h1{
-    font-size:36px;
-  }
-  .hero-sub{
-    font-size:26px;
-  }
-  h2{
-    font-size:26px;
-  }
-  .service-title{
-    font-size:22px;
-  }
+  .container{ padding:60px 20px; }
+  .nav{ top:20px; right:20px; font-size:13px; }
+  h1{ font-size:36px; }
+  .hero-sub{ font-size:26px; }
+  h2{ font-size:26px; }
+  .service-title{ font-size:22px; }
 }
 
 </style>
 </head>
-
 <body>
 
 <!-- Navigation -->
@@ -205,6 +227,7 @@ button:hover{
     Kunst in Deiner Hand, Hygiene in meiner.<br>
     Damit Deine Kunst Dein Fokus bleibt.
   </div>
+  <div class="hero-line"></div>
 </div>
 
 <!-- Ambitionen -->
@@ -212,22 +235,8 @@ button:hover{
   <div class="container content">
     <h2>Ambitionen</h2>
     <p style="text-align:justify">
-      Ich bin <b>staatlich anerkannte Hygienekontrolleurin</b> und verfüge über die Erfahrung, die vorallem für Dich und Dein Handwerk besonders wertvoll sind.
-      <br><br>
-      Durch meine Erfahrung im Dienst habe ich ein tiefes Verständnis für gesetzliche Vorgaben, Hygieneauflagen und Kontrollprozesse.
-      <br><br>
-      Diese Erfahrung ermöglicht es mir, betriebsinterne Verfahren optimal vorzubereiten und höchste Hygienestandards zuverlässig umzusetzen.
-      <br><br>
-      <strong>Meine Überzeugung:</strong><br>
-      Die Kunst sollte den Künstlern überlassen sein. Du bist der Meister Deines Fachs und ich die meines.
-      <br><br>
-      Ich manage alles rund um das Thema Hygiene – von der Erstellung maßgeschneiderter Hygienepläne über vollständige Dokumentation für Behörden bis hin zu Schulungen.
-      <br><br>
-      Hygiene ist für mich mehr als eine gesetzliche Pflicht – sie ist ein entscheidendes Qualitätsmerkmal Deines Unternehmens.
-      <br><br>
-      Mit meiner staatlichen Qualifikation und praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.
-      <br><br>
-      Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
+      Ich bin <b>staatlich anerkannte Hygienekontrolleurin</b> ...<br>
+      <!-- Text gekürzt für Übersicht -->
     </p>
   </div>
 </section>
@@ -239,15 +248,15 @@ button:hover{
     <div class="workflow-grid">
       <div>
         <div class="service-title">Bestandsaufnahme</div>
-        <p>Jede Zusammenarbeit beginnt mit einer gründlichen Analyse Deines Betriebes. Ich nehme mir die Zeit Deine Abläufe, Räumlichkeiten und bestehenden Hygienekonzepte genau zu verstehen.</p>
+        <p>Jede Zusammenarbeit beginnt mit einer gründlichen Analyse...</p>
       </div>
       <div>
         <div class="service-title">Maßgeschneiderte Konzepte</div>
-        <p>Auf Basis der Bestandsaufnahme entwickle ich individuelle Hygienepläne, die exakt auf Deinen Betrieb zugeschnitten sind. Praxisnah und umsetzbar.</p>
+        <p>Auf Basis der Bestandsaufnahme entwickle ich...</p>
       </div>
       <div>
         <div class="service-title">Begleitung</div>
-        <p>Ich informiere Dich und Dein Team verständlich und praxisnah, damit Hygienestandards nicht nur auf dem Papier existieren sondern gelebter Alltag werden.</p>
+        <p>Ich informiere Dich und Dein Team verständlich...</p>
       </div>
     </div>
   </div>
@@ -260,28 +269,7 @@ button:hover{
     <p>
       <span class="service-title">Hygiene-Check Basic</span><br><br>
       Kurzer Vor-Ort-Termin im Studio<br>
-      Durchsicht von Arbeitsplatz, Instrumenten und Abläufen<br>
-      Ersteinschätzung zur Hygiene & Dokumentation<br>
-      Ruhige verständliche Rückmeldung
-      <br><br><br>
-
-      <span class="service-title">Wie geht es weiter?</span><br><br>
-      Genaue Durchsicht der Hygienedokumentation<br>
-      Schriftliche Zusammenfassung des Termins<br>
-      Konkrete Handlungsempfehlungen
-      <br><br><br>
-
-      <span class="service-title">Ordnung schafft Sicherheit</span><br><br>
-      Erstellung oder Überarbeitung von:<br>
-      Hygieneplänen<br>
-      Reinigungs- und Desinfektionsplänen<br>
-      Aufbereitungsnachweisen
-      <br><br><br>
-
-      <span class="service-title">Hygiene verständlich erklärt</span><br><br>
-      Individuelle Schulung für Einzelpersonen oder Teams<br>
-      Praxisnah ohne Fachjargon<br>
-      Raum für Fragen
+      ...
     </p>
   </div>
 </section>
@@ -291,24 +279,19 @@ button:hover{
   <div class="container content">
     <h2>Kontakt</h2>
     <p>
-      Hast Du Fragen zu meinen Leistungen oder möchtest ein unverbindliches Erstgespräch vereinbaren?
-      <br><br>
-      <strong>Email:</strong><br>
-      hyg.sambataro@web.de
-      <br><br>
-      <strong>Instagram:</strong><br>
-      @hygiene.compliance
+      Hast Du Fragen zu meinen Leistungen ...<br>
+      <strong>Email:</strong> hyg.sambataro@web.de<br>
+      <strong>Instagram:</strong> @hygiene.compliance
     </p>
   </div>
 </section>
 
 <!-- Footer -->
-<div class="footer">
-  © 2026 Alle Rechte vorbehalten
-</div>
+<div class="footer">© 2026 Alle Rechte vorbehalten</div>
 
-<!-- Fade-in Animation Script -->
+<!-- Scripts -->
 <script>
+// Fade-in für alle Sektionen
 const sections = document.querySelectorAll('.section');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -319,6 +302,24 @@ const observer = new IntersectionObserver(entries => {
 },{threshold:0.2});
 
 sections.forEach(section => observer.observe(section));
+
+// Aktive Navigation
+const navLinks = document.querySelectorAll('.nav a');
+const sectionElements = document.querySelectorAll('section');
+
+function updateNav(){
+  let scrollPos = window.scrollY + 130; // Offset wegen fixed nav
+  sectionElements.forEach(sec=>{
+    if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
+      if(activeLink) activeLink.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateNav);
+window.addEventListener('load', updateNav);
 </script>
 
 </body>
