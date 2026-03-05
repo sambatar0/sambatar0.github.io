@@ -72,6 +72,22 @@ p {
     color: #3e3e3e;
     margin-left: 30px;
     transition: opacity 0.3s ease;
+    position: relative;
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: #3e3e3e;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
 }
 
 .nav a:hover {
@@ -146,12 +162,13 @@ Ich manage alles rund um das Thema Hygiene; von der Erstellung maßgeschneiderte
 Mit meiner staatlichen Qualifikation und meiner praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.<br>
     Damit Du Dich voll auf Dein Handwerk und Deine Kunden konzentrieren kannst.
  </p>
-    </div>
+</div>
     
     <!-- Leistungen -->
 <section class="workflow" id="arbeitsweise">>
 <div class="container">
 <h2><strong>Arbeitsweise</strong></h2>
+<br>
 <div class="workflow-grid">
 
 <div class="workflow-item">
