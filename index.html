@@ -364,18 +364,22 @@ function updateNav(){
     const sectionTop = sec.offsetTop;
     const sectionHeight = sec.offsetHeight;
 
-    // Alle Links deaktivieren
     navLinks.forEach(a=>a.classList.remove('active'));
 
-    // Nur aktiv, wenn ScrollPosition innerhalb Sektion ist
     if(scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight){
       const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
       if(activeLink) activeLink.classList.add('active');
     }
   });
 }
-window.addEventListener('scroll',updateNav);
-window.addEventListener('load',updateNav);
+
+// Seite immer oben laden
+window.addEventListener('load', () => {
+  window.scrollTo(0,0); // Start immer Hero
+  updateNav();
+});
+
+window.addEventListener('scroll', updateNav);
 </script>
 
 </body>
