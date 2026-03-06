@@ -37,7 +37,7 @@ body{
   position:fixed;
   top:40px;
   right:40px;
-  font-size:12px;   /* Schriftgröße reduziert */
+  font-size:12px;   
   letter-spacing:1px;
   z-index:100;
 }
@@ -45,7 +45,7 @@ body{
 .nav a{
   text-decoration:none;
   color:#3e3e3e;
-  margin-left:15px;  /* Abstand zwischen den Links reduziert */
+  margin-left:15px;  
   position:relative;
   transition: color 0.3s;
 }
@@ -214,11 +214,11 @@ button:hover{
   .nav{
     top:20px;
     right:20px;
-    font-size:11px;  /* Schriftgröße noch kleiner für Mobile */
+    font-size:11px;  
   }
 
   .nav a{
-    margin-left:10px; /* Abstand reduziert */
+    margin-left:10px; 
   }
 
   h2{
@@ -334,7 +334,7 @@ button:hover{
     <h2>Kontakt</h2>
     <p>
       Hast Du Fragen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br><br>
-      Ich freue mich auf Deine Nachricht!<br>
+      Ich freue mich über Deine Nachricht!
       <br>
       <strong>Email:</strong> hyg.sambataro@web.de<br>
       <strong>Instagram:</strong> @hygiene.compliance
@@ -362,12 +362,19 @@ sections.forEach(section=>observer.observe(section));
 const navLinks = document.querySelectorAll('.nav a');
 const sectionElements = document.querySelectorAll('section');
 function updateNav(){
-  let scrollPos = window.scrollY + 150;
+  let scrollPos = window.scrollY + 150; 
+  let heroHeight = document.querySelector('.hero').offsetHeight;
+
   sectionElements.forEach(sec=>{
-    if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
+    const sectionTop = sec.offsetTop;
+
+    // Erst aktiv, wenn Scroll unterhalb Hero
+    if(scrollPos >= sectionTop && scrollPos < sectionTop + sec.offsetHeight){
       navLinks.forEach(a=>a.classList.remove('active'));
-      const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
-      if(activeLink) activeLink.classList.add('active');
+      if(scrollPos >= heroHeight){
+        const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
+        if(activeLink) activeLink.classList.add('active');
+      }
     }
   });
 }
