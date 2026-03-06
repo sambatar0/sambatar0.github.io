@@ -11,204 +11,223 @@
 
 /* Smooth Scroll */
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 /* Grundlayout */
 body{
-  margin:0;
-  background:#f5efe6;
-  color:#3e3e3e;
-  font-family:'Inter',sans-serif;
-  font-weight:300;
-  line-height:1.8;
+margin:0;
+background:#f5efe6;
+color:#3e3e3e;
+font-family:'Inter',sans-serif;
+font-weight:300;
+line-height:1.8;
 }
 
 /* Container */
 .container{
-  max-width:900px;
-  margin:auto;
-  padding:80px 40px;
-  text-align:center;
+max-width:900px;
+margin:auto;
+padding:80px 40px;
+text-align:center;
 }
 
 /* Navigation */
 .nav{
-  position:fixed;
-  top:40px;
-  right:60px;
-  font-size:14px;
-  letter-spacing:1px;
-  z-index:100;
+position:fixed;
+top:-80px;
+left:50%;
+transform:translateX(-50%);
+font-size:14px;
+letter-spacing:1px;
+z-index:100;
+transition:0.6s;
+}
+
+.nav.visible{
+top:30px;
 }
 
 .nav a{
-  text-decoration:none;
-  color:#3e3e3e;
-  margin-left:30px;
-  position:relative;
-  transition: color 0.3s;
+text-decoration:none;
+color:#3e3e3e;
+margin:0 15px;
+position:relative;
+transition: color 0.3s;
 }
 
 .nav a.active{
-  color:#b85c38; /* Akzentfarbe für aktiven Menüpunkt */
+color:#b85c38;
 }
 
 .nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:1px;
-  background:#3e3e3e;
-  transition:0.3s;
+content:"";
+position:absolute;
+left:0;
+bottom:-4px;
+width:0;
+height:1px;
+background:#3e3e3e;
+transition:0.3s;
 }
 
 .nav a.active::after{
-  background:#b85c38;
-  width:100%;
+background:#b85c38;
+width:100%;
 }
 
 .nav a:hover::after{
-  width:100%;
+width:100%;
 }
 
 /* Überschriften */
 h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:48px;
-  font-weight:300;
-  letter-spacing:1px;
-  text-align:center;
-  margin-bottom:20px;
-  color:#3e3e3e;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  opacity:0;
-  transform: translateY(-20px);
-  animation: fadeInHero 1s forwards 0.3s;
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(28px,6vw,48px);
+font-weight:300;
+letter-spacing:1px;
+text-align:center;
+margin-bottom:20px;
+color:#3e3e3e;
+text-shadow:1px 1px 4px rgba(0,0,0,0.1);
+white-space:nowrap;
+opacity:0;
+transform: translateY(-20px);
+animation: fadeInHero 1s forwards 0.3s;
 }
-  
+
 @keyframes fadeInHero{
-  to { opacity:1; transform: translateY(0); }
+to { opacity:1; transform: translateY(0); }
 }
 
 .hero-sub{
-  font-family:'Cormorant Garamond',serif;
-  font-size:34px;
-  font-weight:300;
-  text-align:center;
-  margin-top:20px;
-  opacity:0;
-  transform: translateY(20px);
-  animation: fadeInHero 1s forwards 0.6s;
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(20px,4vw,34px);
+font-weight:300;
+text-align:center;
+margin-top:20px;
+opacity:0;
+transform: translateY(20px);
+animation: fadeInHero 1s forwards 0.6s;
 }
 
-/* Linie unter Hero */
+/* Linie */
 .hero-line{
-  width:80px;
-  height:2px;
-  background:#3e3e3e;
-  margin:20px auto 60px;
-  opacity:0;
-  transform: scaleX(0);
-  animation: lineIn 0.8s forwards 0.9s;
+width:80px;
+height:2px;
+background:#3e3e3e;
+margin:20px auto 60px;
+opacity:0;
+transform: scaleX(0);
+animation: lineIn 0.8s forwards 0.9s;
 }
 
 @keyframes lineIn{
-  to{ opacity:1; transform: scaleX(1); }
+to{ opacity:1; transform: scaleX(1); }
 }
 
-/* Haupt-Section-Überschriften */
+/* Section Titel */
 h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:30px;
-  font-weight:600;
-  text-align:center;
-  margin-bottom:40px;
-  scroll-margin-top:120px; /* Header oben */
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+font-weight:600;
+text-align:center;
+margin-bottom:40px;
+scroll-margin-top:120px;
 }
 
 /* Text */
 p{
-  font-size:18px;
-  margin:auto;
-  line-height:1.8;
+font-size:18px;
+margin:auto;
+line-height:1.8;
 }
 
 /* Sections */
 .section{
-  padding:120px 0;
-  opacity:0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+padding:120px 0;
+opacity:0;
+transform: translateY(50px);
+transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .section.visible{
-  opacity:1;
-  transform: translateY(0);
+opacity:1;
+transform: translateY(0);
 }
 
-/* gleiche Breite für Inhalte */
+/* gleiche Breite */
 .content{
-  max-width:700px;
-  margin:auto;
-  text-align:center;
+max-width:700px;
+margin:auto;
+text-align:center;
 }
 
-/* Workflow / Service Titel */
+/* Service Titel */
 .service-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  font-weight:600;
-  margin-bottom:15px;
+font-family:'Cormorant Garamond',serif;
+font-size:24px;
+font-weight:600;
+margin-bottom:15px;
 }
 
 /* Workflow Grid */
 .workflow-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:60px;
-  max-width:700px;
-  margin:auto;
+display:grid;
+grid-template-columns:1fr;
+gap:60px;
+max-width:700px;
+margin:auto;
 }
 
-/* Buttons */
+/* Button */
 button{
-  margin-top:30px;
-  padding:12px 28px;
-  background:transparent;
-  border:1px solid #3e3e3e;
-  font-size:14px;
-  letter-spacing:1px;
-  cursor:pointer;
-  transition:0.3s;
+margin-top:30px;
+padding:12px 28px;
+background:transparent;
+border:1px solid #3e3e3e;
+font-size:14px;
+letter-spacing:1px;
+cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-  background:#3e3e3e;
-  color:#f5efe6;
+background:#3e3e3e;
+color:#f5efe6;
 }
 
 /* Footer */
 .footer{
-  margin-top:120px;
-  font-size:14px;
-  opacity:0.6;
-  text-align:center;
+margin-top:120px;
+font-size:14px;
+opacity:0.6;
+text-align:center;
 }
 
-/* Mobile Optimierung */
+/* Mobile */
 @media(max-width:768px){
-  .container{ padding:60px 20px; }
-  .nav{ top:20px; right:20px; font-size:13px; }
-  h1{
-  font-size:36px;
-  white-space: nowrap;
+
+.container{
+padding:60px 20px;
 }
-  .hero-sub{ font-size:26px; }
-  h2{ font-size:26px; }
-  .service-title{ font-size:22px; }
+
+.nav{
+font-size:13px;
+}
+
+.nav a{
+margin:0 10px;
+}
+
+h2{
+font-size:26px;
+}
+
+.service-title{
+font-size:22px;
+}
+
 }
 
 </style>
@@ -217,148 +236,230 @@ button:hover{
 
 <!-- Navigation -->
 <div class="nav">
-  <a href="#about">Ambitionen</a>
-  <a href="#arbeitsweise">Arbeitsweise</a>
-  <a href="#work">Leistungen</a>
-  <a href="#contact">Kontakt</a>
+<a href="#about">Ambitionen</a>
+<a href="#arbeitsweise">Arbeitsweise</a>
+<a href="#work">Leistungen</a>
+<a href="#contact">Kontakt</a>
 </div>
 
 <!-- Hero -->
 <div class="container">
-  <h1>HYGIENE • COMPLIANCE</h1>
-  <div class="hero-sub">
-    <br>
-    <br>
-    Kunst in Deiner Hand, Hygiene in meiner.<br>
-    Damit Deine Kunst Dein Fokus bleibt.
-  </div>
-  <div class="hero-line"></div>
+
+<h1>HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
+
+<div class="hero-sub">
+
+<br><br>
+
+Kunst in Deiner Hand, Hygiene in meiner.<br>
+Damit Deine Kunst Dein Fokus bleibt.
+
+</div>
+
+<div class="hero-line"></div>
+
 </div>
 
 <!-- Ambitionen -->
 <section class="section" id="about">
-  <div class="container content">
-    <h2>Ambitionen</h2>
-    <p style="text-align:justify">
-      Als <b>staatlich anerkannte Hygienekontrolleurin</b> verfüge ich über fundiertes Fachwissen, das insbesondere für Dich und Dein Handwerk von großem Wert sein kann.
-      <br><br>
-      Durch meine Erfahrung im Dienst habe ich ein tiefes Verständnis für gesetzliche Vorgaben, Hygieneauflagen und Kontrollprozesse.
-      <br><br>
-      Diese Erfahrung ermöglicht es mir, betriebsinterne Verfahren optimal vorzubereiten und höchste Hygienestandards zuverlässig umzusetzen.
-      <br><br>
-      <strong>Meine Überzeugung:</strong><br>
-      Die Kunst sollte den Künstlern überlassen bleiben. Du bist der Meister Deines Fachs und ich die meines.
-      <br><br>
-      Ich manage alles rund um das Thema Hygiene – von der Erstellung maßgeschneiderter Hygienepläne über vollständige Dokumentation für Behörden bis hin zu Schulungen.
-      <br><br>
-      Hygiene ist für mich mehr als eine gesetzliche Pflicht – sie ist ein entscheidendes Qualitätsmerkmal Deines Unternehmens.
-      <br><br>
-      Mit meiner staatlichen Qualifikation und praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.
-      <br><br>
-      Damit Du Dich voll und ganz auf Dein Handwerk und Deine Kunden konzentrieren kannst.
-    </p>
-  </div>
+<div class="container content">
+
+<h2>Ambitionen</h2>
+
+<p style="text-align:justify">
+
+Als <b>staatlich anerkannte Hygienekontrolleurin</b> verfüge ich über fundiertes Fachwissen, das insbesondere für Dich und Dein Handwerk von großem Wert sein kann.
+
+<br><br>
+
+Durch meine Erfahrung im Dienst habe ich ein tiefes Verständnis für gesetzliche Vorgaben, Hygieneauflagen und Kontrollprozesse.
+
+<br><br>
+
+Diese Erfahrung ermöglicht es mir, betriebsinterne Verfahren optimal vorzubereiten und höchste Hygienestandards zuverlässig umzusetzen.
+
+<br><br>
+
+<strong>Meine Überzeugung:</strong><br>
+
+Die Kunst sollte den Künstlern überlassen bleiben.  
+Du bist der Meister Deines Fachs und ich die meines.
+
+<br><br>
+
+Ich manage alles rund um das Thema Hygiene – von der Erstellung maßgeschneiderter Hygienepläne über vollständige Dokumentation für Behörden bis hin zu Schulungen.
+
+<br><br>
+
+Hygiene ist für mich mehr als eine gesetzliche Pflicht – sie ist ein entscheidendes Qualitätsmerkmal Deines Unternehmens.
+
+<br><br>
+
+Mit meiner staatlichen Qualifikation und praktischen Erfahrung sorge ich dafür, dass Dein Betrieb sicher, gesetzeskonform und professionell aufgestellt ist.
+
+<br><br>
+
+Damit Du Dich voll und ganz auf Dein Handwerk und Deine Kunden konzentrieren kannst.
+
+</p>
+
+</div>
 </section>
 
 <!-- Arbeitsweise -->
 <section class="section" id="arbeitsweise">
-  <div class="container">
-    <h2>Arbeitsweise</h2>
-    <div class="workflow-grid">
-      <div>
-        <div class="service-title">Bestandsaufnahme</div>
-        <p>Jede Zusammenarbeit beginnt mit einer gemeinsamen gründlichen Analyse Deines Betriebes.</p>
-      </div>
-      <div>
-        <div class="service-title">Maßgeschneiderte Konzepte</div>
-        <p>Auf Basis der Bestandsaufnahme entwickle ich individuelle Hygienepläne- und konzepte, die exakt und umsetzbar auf Deinen Betrieb zugeschnitten sind.</p>
-      </div>
-      <div>
-        <div class="service-title">Begleitung</div>
-        <p>Ich unterstütze Dich und Dein Team vollumfänglich, damit Hygienestandards nicht nur auf dem Papier existieren sondern gelebter Alltag werden.</p>
-      </div>
-    </div>
-  </div>
+
+<div class="container">
+
+<h2>Arbeitsweise</h2>
+
+<div class="workflow-grid">
+
+<div>
+<div class="service-title">Bestandsaufnahme</div>
+<p>Jede Zusammenarbeit beginnt mit einer gemeinsamen gründlichen Analyse Deines Betriebes.</p>
+</div>
+
+<div>
+<div class="service-title">Maßgeschneiderte Konzepte</div>
+<p>Individuelle Hygienepläne und Konzepte exakt abgestimmt auf Deinen Betrieb.</p>
+</div>
+
+<div>
+<div class="service-title">Begleitung</div>
+<p>Ich unterstütze Dich und Dein Team, damit Hygienestandards gelebter Alltag werden.</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- Leistungen -->
 <section class="section" id="work">
-  <div class="container content">
-    <h2>Leistungen</h2>
-    <p>
-      <span class="service-title">Hygiene-Check Basic</span><br><br>
-      Kurzer Vor-Ort-Termin im Studio<br>
-      Durchsicht von Arbeitsplätzen, Instrumenten und Abläufen<br>
-      Ersteinschätzung zur Hygiene & Dokumentation<br>
-      Eine verständliche und reale Rückmeldung
-      <br><br><br>
-      
-       <span class="service-title">Wie geht es weiter?</span><br><br>
-      Genaue Durchsicht der vorhandenen Hygienedokumentation<br>
-      Schriftliche Zusammenfassung des Termins und der Ergebnisse<br>
-      Konkrete und qualifizierte Handlungsempfehlungen mit Gesetzesbezug
-      <br><br><br>
 
-      <span class="service-title">Ordnung schafft Sicherheit</span><br><br>
-      Erstellung oder Überarbeitung von:<br>
-      Hygieneplänen<br>
-      Reinigungs- und Desinfektionsplänen<br>
-      <br><br><br>
+<div class="container content">
 
-      <span class="service-title">Hygiene verständlich erklärt</span><br><br>
-      Individuelle Schulung für Einzelpersonen oder Teams<br>
-      Praxisnah ohne Fachjargon<br>
-      Raum für Fragen
-    </p>
-  </div>
+<h2>Leistungen</h2>
+
+<p>
+
+<span class="service-title">Hygiene-Check Basic</span><br><br>
+
+Kurzer Vor-Ort-Termin im Studio<br>
+Durchsicht von Arbeitsplätzen, Instrumenten und Abläufen<br>
+Ersteinschätzung zur Hygiene & Dokumentation<br>
+Verständliche Rückmeldung
+
+<br><br><br>
+
+<span class="service-title">Wie geht es weiter?</span><br><br>
+
+Durchsicht vorhandener Hygienedokumentation<br>
+Schriftliche Zusammenfassung<br>
+Konkrete Handlungsempfehlungen mit Gesetzesbezug
+
+<br><br><br>
+
+<span class="service-title">Ordnung schafft Sicherheit</span><br><br>
+
+Erstellung oder Überarbeitung von:<br>
+Hygieneplänen<br>
+Reinigungs- und Desinfektionsplänen
+
+<br><br><br>
+
+<span class="service-title">Hygiene verständlich erklärt</span><br><br>
+
+Individuelle Schulungen<br>
+Praxisnah und verständlich<br>
+Raum für Fragen
+
+</p>
+
+</div>
 </section>
 
 <!-- Kontakt -->
 <section class="section" id="contact">
-  <div class="container content">
-    <h2>Kontakt</h2>
-    <p>
-      Hast Du Fragen zu meinen Leistungen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br>
-      <strong>Email:</strong> hyg.sambataro@web.de<br>
-      <strong>Instagram:</strong> @hygiene.compliance
-    </p>
-  </div>
+
+<div class="container content">
+
+<h2>Kontakt</h2>
+
+<p>
+
+Hast Du Fragen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br><br>
+
+<strong>Email:</strong> hyg.sambataro@web.de<br>
+<strong>Instagram:</strong> @hygiene.compliance
+
+</p>
+
+</div>
 </section>
 
-<!-- Footer -->
 <div class="footer">© 2026 Alle Rechte vorbehalten</div>
 
-<!-- Scripts -->
 <script>
-// Fade-in für alle Sektionen
+
+/* Fade-in Sections */
+
 const sections = document.querySelectorAll('.section');
+
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
 },{threshold:0.2});
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(section=>observer.observe(section));
 
-// Aktive Navigation
+
+/* Navigation sichtbar nach Scroll */
+
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY > 120){
+nav.classList.add("visible");
+}else{
+nav.classList.remove("visible");
+}
+
+});
+
+
+/* Aktiver Menüpunkt */
+
 const navLinks = document.querySelectorAll('.nav a');
 const sectionElements = document.querySelectorAll('section');
 
 function updateNav(){
-  let scrollPos = window.scrollY + 130; // Offset wegen fixed nav
-  sectionElements.forEach(sec=>{
-    if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
-      navLinks.forEach(a=>a.classList.remove('active'));
-      const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
-      if(activeLink) activeLink.classList.add('active');
-    }
-  });
+
+let scrollPos = window.scrollY + 150;
+
+sectionElements.forEach(sec=>{
+
+if(scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight){
+
+navLinks.forEach(a=>a.classList.remove('active'));
+
+const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
+
+if(activeLink) activeLink.classList.add('active');
+
 }
 
-window.addEventListener('scroll', updateNav);
-window.addEventListener('load', updateNav);
+});
+
+}
+
+window.addEventListener('scroll',updateNav);
+window.addEventListener('load',updateNav);
+
 </script>
 
 </body>
