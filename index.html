@@ -32,12 +32,12 @@ body{
   text-align:center;
 }
 
-/* Navigation immer rechts */
+/* Navigation immer rechts, kompakt */
 .nav{
   position:fixed;
   top:40px;
-  right:60px;
-  font-size:14px;
+  right:40px;
+  font-size:12px;   /* Schriftgröße reduziert */
   letter-spacing:1px;
   z-index:100;
 }
@@ -45,7 +45,7 @@ body{
 .nav a{
   text-decoration:none;
   color:#3e3e3e;
-  margin-left:30px;
+  margin-left:15px;  /* Abstand zwischen den Links reduziert */
   position:relative;
   transition: color 0.3s;
 }
@@ -208,11 +208,11 @@ button:hover{
   .nav{
     top:20px;
     right:20px; /* bleibt rechts */
-    font-size:13px;
+    font-size:11px;  /* Schriftgröße noch kleiner für Mobile */
   }
 
   .nav a{
-    margin-left:30px;
+    margin-left:10px; /* Abstand reduziert */
   }
 
   h2{
