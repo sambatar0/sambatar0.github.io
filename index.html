@@ -76,8 +76,8 @@ body{
 
 /* Hero */
 .hero{
-  padding-top:80px;
-  padding-bottom:80px;
+  padding-top:60px;   /* Höhe oben */
+  padding-bottom:60px; /* Höhe unten */
   text-align:center;
 }
 
@@ -245,7 +245,6 @@ button:hover{
 <div class="hero">
   <h1 class="hero-title">HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
   <div class="hero-sub">
-    <br><br>
     Kunst in Deiner Hand, Hygiene in meiner.<br>
     Damit Deine Kunst Dein Fokus bleibt.
   </div>
@@ -332,9 +331,7 @@ button:hover{
   <div class="container content">
     <h2>Kontakt</h2>
     <p>
-      Hast Du Fragen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br>
-      Ich freue mich auf Deine Nachricht!<br>
-      <br>
+      Hast Du Fragen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br><br>
       <strong>Email:</strong> hyg.sambataro@web.de<br>
       <strong>Instagram:</strong> @hygiene.compliance
     </p>
@@ -375,11 +372,14 @@ function updateNav(){
   });
 }
 
-// Seite immer oben laden und URL-Hash entfernen
+// Seite immer oben laden, URL-Hash entfernen, auch auf Mobil
 window.addEventListener('load', () => {
-  window.scrollTo(0,0); // Start immer Hero
+  // Kurzer Timeout für Mobilbrowser
+  setTimeout(() => {
+    window.scrollTo(0,0); // Hero-Bereich
+  }, 50);
 
-  // URL-Hash entfernen
+  // URL-Hash entfernen, ohne reload
   if(window.location.hash){
     history.replaceState(null, document.title, window.location.pathname + window.location.search);
   }
