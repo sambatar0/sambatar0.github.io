@@ -201,18 +201,48 @@ button:hover{
 
 /* Mobile */
 @media(max-width:768px){
+
   .container{
-    padding:60px 20px;
+    padding:80px 22px;
   }
 
+  /* Navigation oben mittig */
   .nav{
-    top:20px;
-    right:20px;
-    font-size:11px;  
+    position:sticky;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    padding:14px 10px;
+    background:#f5efe6;
+    font-size:11px;
+    z-index:100;
   }
 
   .nav a{
-    margin-left:10px; 
+    margin:0;
+  }
+
+  /* Hero perfekt zentriert */
+  .hero{
+    min-height:100vh;
+    padding-top:40px;
+    padding-bottom:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+
+  h1.hero-title{
+    white-space:normal;
+    font-size:34px;
+  }
+
+  .hero-sub{
+    font-size:22px;
   }
 
   h2{
@@ -223,10 +253,8 @@ button:hover{
     font-size:22px;
   }
 
-  .hero{
-    min-height: 60vh; /* kompakter auf Handy */
-  }
 }
+  
 
 </style>
 </head>
