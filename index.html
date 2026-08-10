@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>hygiene.compliance</title>
+
+<title>hygiene.compliance | Hygiene. Qualität. Sicherheit.</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
 
@@ -24,12 +25,12 @@ body{
   line-height:1.8;
 }
 
-/* Navigation immer rechts, kompakt */
+/* Navigation */
 .nav{
   position:fixed;
   top:40px;
   right:40px;
-  font-size:12px;   
+  font-size:12px;
   letter-spacing:1px;
   z-index:100;
 }
@@ -37,9 +38,9 @@ body{
 .nav a{
   text-decoration:none;
   color:#3e3e3e;
-  margin-left:15px;  
+  margin-left:15px;
   position:relative;
-  transition: color 0.3s;
+  transition:color 0.3s;
 }
 
 .nav a.active{
@@ -66,15 +67,15 @@ body{
   width:100%;
 }
 
-/* Hero Bereich zentriert */
+/* Hero */
 .hero{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertikal zentriert */
-  align-items: center;     /* horizontal zentriert */
-  min-height: 80vh;        /* 80% der Bildschirmhöhe */
-  text-align: center;
-  padding: 0 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:80vh;
+  text-align:center;
+  padding:0 20px;
 }
 
 h1.hero-title{
@@ -87,8 +88,8 @@ h1.hero-title{
   text-shadow:1px 1px 4px rgba(0,0,0,0.1);
   white-space:nowrap;
   opacity:0;
-  transform: translateY(-20px);
-  animation: fadeInHero 1s forwards 0.3s;
+  transform:translateY(-20px);
+  animation:fadeInHero 1s forwards 0.3s;
 }
 
 .hero-sub{
@@ -98,8 +99,8 @@ h1.hero-title{
   text-align:center;
   margin-top:20px;
   opacity:0;
-  transform: translateY(20px);
-  animation: fadeInHero 1s forwards 0.6s;
+  transform:translateY(20px);
+  animation:fadeInHero 1s forwards 0.6s;
 }
 
 .hero-line{
@@ -108,16 +109,22 @@ h1.hero-title{
   background:#3e3e3e;
   margin:20px auto 60px;
   opacity:0;
-  transform: scaleX(0);
-  animation: lineIn 0.8s forwards 0.9s;
+  transform:scaleX(0);
+  animation:lineIn 0.8s forwards 0.9s;
 }
 
 @keyframes fadeInHero{
-  to { opacity:1; transform: translateY(0); }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 @keyframes lineIn{
-  to{ opacity:1; transform: scaleX(1); }
+  to{
+    opacity:1;
+    transform:scaleX(1);
+  }
 }
 
 /* Section Titel */
@@ -141,16 +148,16 @@ p{
 .section{
   padding:120px 0;
   opacity:0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform:translateY(50px);
+  transition:opacity 1s ease-out, transform 1s ease-out;
 }
 
 .section.visible{
   opacity:1;
-  transform: translateY(0);
+  transform:translateY(0);
 }
 
-/* gleiche Breite */
+/* Content */
 .content{
   max-width:700px;
   margin:auto;
@@ -174,6 +181,25 @@ p{
   margin:auto;
 }
 
+/* Leistungen */
+.service-block{
+  margin-bottom:65px;
+}
+
+.service-block:last-child{
+  margin-bottom:0;
+}
+
+.service-list{
+  margin-top:15px;
+  padding-left:0;
+  list-style:none;
+}
+
+.service-list li{
+  margin-bottom:8px;
+}
+
 /* Button */
 button{
   margin-top:30px;
@@ -191,12 +217,31 @@ button:hover{
   color:#f5efe6;
 }
 
+/* Kontakt Links */
+.contact-link{
+  color:#3e3e3e;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:0.3s;
+}
+
+.contact-link:hover{
+  color:#b85c38;
+  border-bottom:1px solid #b85c38;
+}
+
 /* Footer */
 .footer{
   margin-top:120px;
+  padding-bottom:40px;
   font-size:14px;
   opacity:0.6;
   text-align:center;
+}
+
+.footer a{
+  color:#3e3e3e;
+  text-decoration:none;
 }
 
 /* Mobile */
@@ -206,7 +251,7 @@ button:hover{
     padding:80px 22px;
   }
 
-  /* Navigation oben mittig */
+  /* Navigation */
   .nav{
     position:sticky;
     top:0;
@@ -225,7 +270,7 @@ button:hover{
     margin:0;
   }
 
-  /* Hero perfekt zentriert */
+  /* Hero */
   .hero{
     min-height:100vh;
     padding-top:40px;
@@ -244,7 +289,6 @@ button:hover{
 
   .hero-sub{
     font-size:20px;
-
   }
 
   h2{
@@ -255,11 +299,15 @@ button:hover{
     font-size:22px;
   }
 
+  p{
+    font-size:17px;
+  }
+
 }
-  
 
 </style>
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -270,163 +318,615 @@ button:hover{
   <a href="#contact">Kontakt</a>
 </div>
 
+
 <!-- Hero -->
 <div class="hero">
-  <h1 class="hero-title">HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
+
+  <h1 class="hero-title">
+    HYGIENE&nbsp;•&nbsp;COMPLIANCE
+  </h1>
+
   <div class="hero-sub">
-    Kunst in Deiner Hand, Hygiene in meiner.<br>
-    Damit Deine Kunst Dein Fokus bleibt.
+    Hygiene. Qualität. Sicherheit.<br>
+    Professionelles Hygienemanagement für Ihre Einrichtung.
   </div>
+
   <div class="hero-line"></div>
+
 </div>
+
 
 <!-- Ambitionen -->
 <section class="section" id="about">
+
   <div class="container content">
+
     <h2>Ambitionen</h2>
+
     <p style="text-align:justify">
-  Als <strong>staatlich anerkannte Hygienekontrolleurin und Desinfektorin</strong> verfüge ich über fundiertes Fachwissen und umfassende Erfahrung im Bereich Hygiene, Desinfektion und hygienischer Qualitätsstandards. Ich unterstütze medizinische und pflegerische Einrichtungen, stationäre Betriebe sowie Unternehmen und Einrichtungen mit besonderen hygienischen Anforderungen dabei, gesetzliche Vorgaben und fachliche Anforderungen sicher und praxisnah umzusetzen.
-Dabei geht es nicht nur darum, Vorgaben einzuhalten. Gemeinsam schaffen wir klare Strukturen, nachvollziehbare Abläufe und nachhaltige Hygienestandards, die im täglichen Betrieb tatsächlich funktionieren.
-Von der Entwicklung individueller Hygienekonzepte und Hygienepläne über die Optimierung von Reinigungs- und Desinfektionsabläufen bis hin zu Dokumentation, Hygienechecks, Kontrollen und praxisnahen Schulungen begleite ich Sie umfassend und lösungsorientiert.
-</p>
-<br>
-<p style="text-align:justify">
-  <strong>Meine Überzeugung:</strong> Sie sind die Expertin oder der Experte für Ihr Fachgebiet und ich die Expertin für Hygiene.
-Sie kümmern sich um Ihre Patienten, Bewohner, Kunden und Ihren täglichen Betriebsablauf. Ich unterstütze Sie dabei, alle hygienerelevanten Prozesse professionell zu gestalten, zu überprüfen und kontinuierlich weiterzuentwickeln.
-Mein Anspruch ist es, Hygiene nicht als lästige Pflicht, sondern als selbstverständlichen Bestandteil von Qualität, Sicherheit und Professionalität zu etablieren.
-Dabei erhalten Sie keine Lösungen von der Stange: Ich entwickle und begleite Hygienemaßnahmen, die zu Ihrer Einrichtung, Ihren Mitarbeitern und Ihren individuellen Arbeitsabläufen passen.
-Denn professionelle Hygiene schafft Sicherheit – für Ihre Mitarbeitenden, Ihre Patienten, Bewohner, Kunden und letztlich für Ihren gesamten Betrieb.
-</p>
-<br>
-<p style="text-align:justify">
-  <strong>Wichtiger Hinweis:</strong> Ich übe diese Tätigkeit nebenberuflich aus und übernehme keine hoheitlichen oder behördlichen Funktionen. Meine Leistungen erfolgen unabhängig und ersetzen keine amtlichen Kontrollen oder Entscheidungen von Behörden. Mit meiner Qualifikation und Erfahrung sorge ich dafür, dass Ihr Betrieb sicher, gesetzeskonform und professionell aufgestellt ist. 
-</p>
+
+      Als <strong>staatlich anerkannte Hygienekontrolleurin und Desinfektorin</strong>
+      verfüge ich über fundiertes Fachwissen und umfassende Erfahrung im Bereich
+      Hygiene, Desinfektion und hygienischer Qualitätsstandards.
+
+      Ich unterstütze <strong>medizinische und pflegerische Einrichtungen,
+      stationäre Betriebe sowie Unternehmen und Einrichtungen mit besonderen
+      hygienischen Anforderungen</strong> dabei, gesetzliche Vorgaben und
+      fachliche Anforderungen sicher und praxisnah umzusetzen.
+
+      Dabei geht es nicht nur darum, Vorgaben einzuhalten. Gemeinsam schaffen
+      wir klare Strukturen, nachvollziehbare Abläufe und nachhaltige
+      Hygienestandards, die im täglichen Betrieb tatsächlich funktionieren.
+
+      Von der Entwicklung individueller Hygienekonzepte und Hygienepläne über
+      die Optimierung von Reinigungs- und Desinfektionsabläufen bis hin zu
+      Dokumentation, Hygienechecks, Kontrollen und praxisnahen Schulungen
+      begleite ich Sie umfassend und lösungsorientiert.
+
     </p>
+
+    <br>
+
+    <p style="text-align:justify">
+
+      <strong>Meine Überzeugung:</strong>
+
+      Sie sind die Expertin oder der Experte für Ihr Fachgebiet –
+      <strong>ich bin die Expertin für Hygiene.</strong>
+
+      Sie kümmern sich um Ihre Patienten, Bewohner, Kunden und Ihren täglichen
+      Betriebsablauf. Ich unterstütze Sie dabei, alle hygienerelevanten Prozesse
+      professionell zu gestalten, zu überprüfen und kontinuierlich
+      weiterzuentwickeln.
+
+      Mein Anspruch ist es, Hygiene nicht als lästige Pflicht, sondern als
+      selbstverständlichen Bestandteil von <strong>Qualität, Sicherheit und
+      Professionalität</strong> zu etablieren.
+
+      Dabei erhalten Sie keine Lösungen von der Stange: Ich entwickle und
+      begleite Hygienemaßnahmen, die zu Ihrer Einrichtung, Ihren Mitarbeitenden
+      und Ihren individuellen Arbeitsabläufen passen.
+
+      Denn professionelle Hygiene schafft Sicherheit – für Ihre Mitarbeitenden,
+      Ihre Patienten, Bewohner, Kunden und letztlich für Ihren gesamten Betrieb.
+
+    </p>
+
+    <br>
+
+    <p style="text-align:justify">
+
+      <strong>Wichtiger Hinweis:</strong>
+
+      Ich übe diese Tätigkeit nebenberuflich aus und übernehme keine hoheitlichen
+      oder behördlichen Funktionen. Meine Leistungen erfolgen unabhängig und
+      ersetzen keine amtlichen Kontrollen oder Entscheidungen von Behörden.
+
+      Mit meiner Qualifikation und Erfahrung unterstütze ich Sie dabei,
+      Ihren Betrieb hygienisch sicher, professionell und strukturiert
+      aufzustellen.
+
+    </p>
+
   </div>
+
 </section>
+
 
 <!-- Arbeitsweise -->
 <section class="section" id="arbeitsweise">
+
   <div class="container content">
+
     <h2>Arbeitsweise</h2>
+
     <div class="workflow-grid">
+
+      <!-- Bestandsaufnahme -->
       <div>
-        <div class="service-title">Bestandsaufnahme</div>
-        <p>Jede Zusammenarbeit beginnt mit einer gründlichen Analyse Deines Betriebes. Gemeinsam ermitteln wir, wo besondere Hygieneschwerpunkte liegen.</p>
+
+        <div class="service-title">
+          Bestandsaufnahme
+        </div>
+
+        <p>
+          Jede Zusammenarbeit beginnt mit einer individuellen Bestandsaufnahme.
+          Gemeinsam betrachten wir Ihre bestehenden hygienischen Strukturen,
+          Arbeitsabläufe und Dokumentationen und ermitteln, wo besondere
+          Hygieneschwerpunkte oder Optimierungsmöglichkeiten bestehen.
+        </p>
+
       </div>
+
+
+      <!-- Analyse -->
       <div>
-        <div class="service-title">Maßgeschneiderte Konzepte</div>
-        <p>Auf Basis der Analyse entwickle ich individuelle Hygienepläne und Konzepte, die exakt auf Deine Abläufe abgestimmt sind.</p>
+
+        <div class="service-title">
+          Analyse &amp; Hygienecheck
+        </div>
+
+        <p>
+          Bestehende Abläufe und Hygienemaßnahmen werden praxisnah überprüft.
+          Dabei geht es darum, Stärken zu erkennen, mögliche Schwachstellen
+          aufzudecken und konkrete Verbesserungsmöglichkeiten zu entwickeln.
+        </p>
+
       </div>
+
+
+      <!-- Konzepte -->
       <div>
-        <div class="service-title">Begleitung</div>
-        <p>Ich begleite Dich und Dein Team umfassend, sodass Hygienestandards nicht nur auf dem Papier bestehen, sondern gelebter Alltag werden.</p>
-     </div>
+
+        <div class="service-title">
+          Maßgeschneiderte Konzepte
+        </div>
+
+        <p>
+          Auf Grundlage der Bestandsaufnahme entwickle ich individuelle
+          Hygienekonzepte, Hygienepläne sowie Reinigungs- und
+          Desinfektionspläne, die auf Ihre Einrichtung und Ihre tatsächlichen
+          Arbeitsabläufe abgestimmt sind.
+        </p>
+
+      </div>
+
+
+      <!-- Umsetzung -->
       <div>
-        <div class="service-title">Rechtsbezüge</div>
-        <p>Meine Beratung bezieht sich auf rechtliche Grundlagen des Infektionsschutzgesetzes (IfSG) und der Hygieneverordnung NRW (Hyg-VO).</p>
+
+        <div class="service-title">
+          Praktische Umsetzung
+        </div>
+
+        <p>
+          Ein Hygienekonzept ist nur dann wertvoll, wenn es im Alltag
+          funktioniert. Deshalb unterstütze ich Sie und Ihr Team dabei,
+          die erarbeiteten Maßnahmen verständlich und praxisnah in die
+          täglichen Abläufe zu integrieren.
+        </p>
+
+      </div>
+
+
+      <!-- Schulung -->
+      <div>
+
+        <div class="service-title">
+          Schulung &amp; Unterweisung
+        </div>
+
+        <p>
+          Mitarbeitende erhalten verständliche und praxisorientierte
+          Schulungen und Unterweisungen. Dabei werden Inhalte auf die
+          individuellen Anforderungen Ihrer Einrichtung abgestimmt.
+        </p>
+
+      </div>
+
+
+      <!-- Begleitung -->
+      <div>
+
+        <div class="service-title">
+          Begleitung &amp; Weiterentwicklung
+        </div>
+
+        <p>
+          Hygiene ist kein einmaliges Projekt. Bei Bedarf begleite ich Sie
+          auch langfristig bei der Überprüfung, Anpassung und Weiterentwicklung
+          Ihrer Hygienestrukturen.
+        </p>
+
+      </div>
+
+
+      <!-- Rechtsbezüge -->
+      <div>
+
+        <div class="service-title">
+          Rechtliche Grundlagen
+        </div>
+
+        <p>
+          Meine Beratung berücksichtigt die für die jeweilige Einrichtung
+          relevanten gesetzlichen und fachlichen Grundlagen. Dazu gehören
+          unter anderem die Anforderungen des Infektionsschutzes sowie
+          einschlägige hygienerechtliche Vorgaben.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
-      <div>
+
 </section>
+
 
 <!-- Leistungen -->
 <section class="section" id="work">
+
   <div class="container content">
+
     <h2>Leistungen</h2>
-    <p>
-      <span class="service-title">Hygieneschulungen</span><br><br>
-      Du suchst Hygieneschulungen – egal ob als Studiobetreiber oder Akademie? <br>
-      Ich biete individuell konzipierte Hygieneschulungen an, die genau auf deine Bedürfnisse und Anforderungen abgestimmt sind <br>
-      Umfang, Inhalte und Durchführung gestalten wir gemeinsam, sodass die Schulung optimal zu deinem Betrieb oder deiner Akademie passt.<br><br>
 
-      <span class="service-title">Hygiene-Check</span><br><br>
-      Kurzer Vor-Ort-Termin im Studio<br>
-      Durchsicht von Arbeitsplätzen, Instrumenten und Abläufen<br>
-      Ersteinschätzung zur Hygiene & Dokumentation<br>
-      Verständliche und praxisnahe Rückmeldung<br><br>
 
-      <span class="service-title">Wie geht es weiter?</span><br><br>
-      Genaue Durchsicht vorhandener Hygienedokumentationen<br>
-      Schriftliche Zusammenfassung der Ergebnisse<br>
-      Konkrete Handlungsempfehlungen mit Bezug zu gesetzlichen Vorgaben<br><br>
+    <!-- Hygieneberatung -->
+    <div class="service-block">
 
-      <span class="service-title">Ordnung schafft Sicherheit</span><br><br>
-      Erstellung oder Überarbeitung von:<br>
-      Hygieneplänen<br>
-      Reinigungs- und Desinfektionsplänen<br><br>
+      <div class="service-title">
+        Hygieneberatung
+      </div>
 
-      <span class="service-title">Hygiene verständlich erklärt</span><br><br>
-      Individuelle Schulungen für Einzelpersonen oder Teams<br>
-      Praxisnah, verständlich und ohne Fachjargon<br>
-      Raum für Fragen und Austausch
-    </p>
+      <p>
+        Individuelle Beratung rund um Hygiene, Desinfektion und hygienische
+        Arbeitsabläufe. Gemeinsam betrachten wir Ihre Anforderungen und
+        entwickeln Lösungen, die zu Ihrer Einrichtung und Ihrem Arbeitsalltag
+        passen.
+      </p>
+
+    </div>
+
+
+    <!-- Hygienekonzepte -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Hygienekonzepte &amp; Hygienepläne
+      </div>
+
+      <p>
+        Erstellung, Überarbeitung und Anpassung individueller
+        Hygienekonzepte und Hygienepläne.
+      </p>
+
+      <ul class="service-list">
+
+        <li>Individuelle Hygienepläne</li>
+        <li>Reinigungs- und Desinfektionspläne</li>
+        <li>Arbeits- und Verfahrensanweisungen</li>
+        <li>Strukturierung hygienischer Abläufe</li>
+        <li>Anpassung an die jeweiligen betrieblichen Anforderungen</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Hygienecheck -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Hygienechecks &amp; Kontrollen
+      </div>
+
+      <p>
+        Ein professioneller Hygienecheck hilft dabei, bestehende Abläufe
+        zu überprüfen und mögliche Schwachstellen frühzeitig zu erkennen.
+      </p>
+
+      <ul class="service-list">
+
+        <li>Vor-Ort-Hygienechecks</li>
+        <li>Überprüfung hygienischer Arbeitsabläufe</li>
+        <li>Betrachtung von Reinigung und Desinfektion</li>
+        <li>Überprüfung vorhandener Dokumentationen</li>
+        <li>Praxisnahe Rückmeldung</li>
+        <li>Konkrete Handlungsempfehlungen</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Reinigung -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Reinigungs- &amp; Desinfektionsmanagement
+      </div>
+
+      <p>
+        Professionelle Reinigung und Desinfektion sind wesentliche Bestandteile
+        eines funktionierenden Hygienemanagements.
+
+        Ich unterstütze Sie dabei, klare, nachvollziehbare und
+        praxistaugliche Abläufe zu entwickeln und dauerhaft umzusetzen.
+      </p>
+
+      <ul class="service-list">
+
+        <li>Reinigungspläne</li>
+        <li>Desinfektionspläne</li>
+        <li>Festlegung hygienischer Abläufe</li>
+        <li>Dokumentationsstrukturen</li>
+        <li>Optimierung bestehender Prozesse</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Qualitätsmanagement -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Qualitäts- &amp; Hygienemanagement
+      </div>
+
+      <p>
+        Hygiene und Qualität gehören zusammen. Ich unterstütze Sie dabei,
+        hygienische Anforderungen sinnvoll in Ihre bestehenden
+        Qualitätsstrukturen zu integrieren und Prozesse nachvollziehbar
+        zu gestalten.
+      </p>
+
+    </div>
+
+
+    <!-- Schulungen -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Schulungen &amp; Unterweisungen
+      </div>
+
+      <p>
+        Hygiene verständlich, praxisnah und auf Ihre Einrichtung zugeschnitten.
+
+        Ich biete individuelle Schulungen für Einzelpersonen, Teams und
+        Mitarbeitende an.
+      </p>
+
+      <ul class="service-list">
+
+        <li>Grundlagen der Hygiene</li>
+        <li>Händehygiene</li>
+        <li>Reinigung und Desinfektion</li>
+        <li>Hygienisches Arbeiten im Alltag</li>
+        <li>Umsetzung von Hygieneplänen</li>
+        <li>Individuelle Unterweisungen</li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- Dokumentation -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Dokumentation
+      </div>
+
+      <p>
+        Eine nachvollziehbare Dokumentation schafft Transparenz und unterstützt
+        eine strukturierte Umsetzung der Hygienemaßnahmen.
+
+        Ich unterstütze Sie bei der Erstellung, Überarbeitung und
+        Strukturierung Ihrer hygienerelevanten Dokumentationen.
+      </p>
+
+    </div>
+
+
+    <!-- Zielgruppen -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Für wen?
+      </div>
+
+      <p>
+        Mein Angebot richtet sich insbesondere an
+        <strong>medizinische und pflegerische Einrichtungen,
+        stationäre Betriebe, medizinische Gewerbe sowie Unternehmen
+        mit besonderen hygienischen Anforderungen.</strong>
+      </p>
+
+      <p style="margin-top:20px;">
+        Ob Sie eine neue Einrichtung aufbauen, bestehende Strukturen
+        überprüfen oder Ihr Hygienemanagement weiterentwickeln möchten –
+        ich unterstütze Sie individuell und lösungsorientiert.
+      </p>
+
+    </div>
+
+
+    <!-- Abschluss -->
+    <div class="service-block">
+
+      <div class="service-title">
+        Hygiene, die im Alltag funktioniert
+      </div>
+
+      <p>
+        Vorschriften und Anforderungen sind wichtig. Entscheidend ist jedoch,
+        dass daraus klare und praktikable Abläufe entstehen.
+
+        Mein Ziel ist es, Hygiene verständlich zu machen, Prozesse zu
+        optimieren und Ihnen und Ihren Mitarbeitenden Sicherheit in der
+        täglichen Umsetzung zu geben.
+      </p>
+
+      <p style="margin-top:25px;">
+        <strong>
+          Für mehr Sicherheit. Für mehr Qualität.
+          Für einen professionellen Hygienestandard.
+        </strong>
+      </p>
+
+    </div>
+
   </div>
+
 </section>
+
 
 <!-- Kontakt -->
 <section class="section" id="contact">
+
   <div class="container content">
+
     <h2>Kontakt</h2>
+
     <p>
-      Hast Du Fragen oder möchtest ein unverbindliches Erstgespräch vereinbaren?<br>
-      Ich freue mich auf Deine Nachricht!<br><br>
-      <strong>Email:</strong> <a href="mailto:hyg.sambataro@web.de">hyg.sambataro@web.de</a><br>
-       <strong>Mobil: 01774159981</strong><br>
-      <strong>Instagram:</strong> <a href="https://www.instagram.com/hygiene.compliance" target="_blank" rel="noopener">@hygiene.compliance</a>
+
+      Sie möchten Ihr Hygienemanagement überprüfen,
+      neu aufstellen oder professionell weiterentwickeln?
+
+      <br><br>
+
+      Gerne bespreche ich mit Ihnen Ihre individuellen Anforderungen
+      und finde gemeinsam mit Ihnen die passende Lösung für Ihre Einrichtung.
+
+      <br><br>
+
+      <strong>
+        Vereinbaren Sie gerne ein unverbindliches Erstgespräch.
+      </strong>
+
+      <br><br>
+
+      <strong>Email:</strong>
+      <a class="contact-link"
+         href="mailto:hyg.sambataro@web.de">
+         hyg.sambataro@web.de
+      </a>
+
+      <br>
+
+      <strong>Mobil:</strong>
+      <a class="contact-link"
+         href="tel:+491774159981">
+         0177 4159981
+      </a>
+
+      <br>
+
+      <strong>Instagram:</strong>
+      <a class="contact-link"
+         href="https://www.instagram.com/hygiene.compliance"
+         target="_blank"
+         rel="noopener">
+         @hygiene.compliance
+      </a>
+
     </p>
+
   </div>
+
 </section>
+
 
 <!-- Footer -->
 <div class="footer">
-  © 2026 Alle Rechte vorbehalten | 
-  <a href="impressum.html">Impressum</a> | 
-  <a href="datenschutz.html">Datenschutz</a>
+
+  © 2026 Alle Rechte vorbehalten |
+
+  <a href="impressum.html">
+    Impressum
+  </a>
+
+  |
+
+  <a href="datenschutz.html">
+    Datenschutz
+  </a>
+
 </div>
+
 
 <!-- Scripts -->
 <script>
-// Fade-in Sections
+
+/* Fade-in Sections */
+
 const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
     if(entry.isIntersecting){
       entry.target.classList.add('visible');
     }
-  });
-},{threshold:0.2});
-sections.forEach(section=>observer.observe(section));
 
-// Navigation aktiv nur ab Sektionen
+  });
+
+},{
+  threshold:0.2
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+
+/* Navigation aktiv */
+
 const navLinks = document.querySelectorAll('.nav a');
 const sectionElements = document.querySelectorAll('section');
+
 function updateNav(){
-  let scrollPos = window.scrollY + 150; 
-  sectionElements.forEach(sec=>{
+
+  let scrollPos = window.scrollY + 150;
+
+  sectionElements.forEach(sec => {
+
     const sectionTop = sec.offsetTop;
     const sectionHeight = sec.offsetHeight;
-    navLinks.forEach(a=>a.classList.remove('active'));
-    if(scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight){
-      const activeLink = document.querySelector(`.nav a[href="#${sec.id}"]`);
-      if(activeLink) activeLink.classList.add('active');
+
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+    });
+
+    if(
+      scrollPos >= sectionTop &&
+      scrollPos < sectionTop + sectionHeight
+    ){
+
+      const activeLink =
+        document.querySelector(`.nav a[href="#${sec.id}"]`);
+
+      if(activeLink){
+        activeLink.classList.add('active');
+      }
+
     }
+
   });
+
 }
 
-// Seite immer oben laden, URL-Hash entfernen, auch auf Mobil
+
+/* Seite immer oben laden */
+
 window.addEventListener('load', () => {
+
   setTimeout(() => {
-    window.scrollTo(0,0); 
-  }, 50);
+    window.scrollTo(0,0);
+  },50);
 
   if(window.location.hash){
-    history.replaceState(null, document.title, window.location.pathname + window.location.search);
+
+    history.replaceState(
+      null,
+      document.title,
+      window.location.pathname +
+      window.location.search
+    );
+
   }
 
   updateNav();
+
 });
 
+
 window.addEventListener('scroll', updateNav);
+
 </script>
 
 </body>
