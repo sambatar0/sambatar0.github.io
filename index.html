@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>hygiene.compliance | Hygiene. Qualität. Sicherheit.</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+<title>
+  hygiene.compliance | Hygiene. Qualität. Sicherheit.
+</title>
+
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@200;300;400&display=swap"
+  rel="stylesheet"
+>
+
 
 <style>
 
@@ -29,24 +42,39 @@ body {
 
 
 /* =========================================================
-   NAVIGATION
+   NAVIGATION – OBEN RECHTS UNTEREINANDER
 ========================================================= */
 
 .nav {
   position: fixed;
+
   top: 40px;
   right: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 12px;
+
   font-size: 12px;
   letter-spacing: 1px;
+
   z-index: 100;
 }
 
 .nav a {
   text-decoration: none;
+
   color: #3e3e3e;
-  margin-left: 15px;
+
+  margin-left: 0;
+
   position: relative;
-  transition: color 0.3s;
+
+  transition:
+    color 0.3s ease;
 }
 
 .nav a.active {
@@ -55,18 +83,28 @@ body {
 
 .nav a::after {
   content: "";
+
   position: absolute;
-  left: 0;
+
+  right: 0;
   bottom: -4px;
+
   width: 0;
   height: 1px;
+
   background: #3e3e3e;
-  transition: 0.3s;
+
+  transition: width 0.3s ease;
 }
 
 .nav a.active::after {
   background: #b85c38;
+
   width: 100%;
+}
+
+.nav a:hover {
+  color: #b85c38;
 }
 
 .nav a:hover::after {
@@ -79,65 +117,147 @@ body {
 ========================================================= */
 
 .hero {
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
   min-height: 80vh;
+
   text-align: center;
+
   padding: 0 20px;
 }
 
+
 h1.hero-title {
+
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 6vw, 48px);
+
+  font-size: clamp(
+    28px,
+    6vw,
+    48px
+  );
+
   font-weight: 300;
+
   letter-spacing: 1px;
+
   margin-bottom: 20px;
+
   color: #3e3e3e;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+
+  text-shadow:
+    1px 1px 4px rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+
   white-space: nowrap;
 
   opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInHero 1s forwards 0.3s;
+
+  transform:
+    translateY(-20px);
+
+  animation:
+    fadeInHero
+    1s
+    forwards
+    0.3s;
 }
 
+
 .hero-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 4vw, 34px);
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
+  font-size:
+    clamp(
+      20px,
+      4vw,
+      34px
+    );
+
   font-weight: 300;
+
   text-align: center;
+
   margin-top: 20px;
 
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInHero 1s forwards 0.6s;
+
+  transform:
+    translateY(20px);
+
+  animation:
+    fadeInHero
+    1s
+    forwards
+    0.6s;
 }
+
 
 .hero-line {
+
   width: 80px;
+
   height: 2px;
+
   background: #3e3e3e;
-  margin: 20px auto 60px;
+
+  margin:
+    20px
+    auto
+    60px;
 
   opacity: 0;
-  transform: scaleX(0);
-  animation: lineIn 0.8s forwards 0.9s;
+
+  transform:
+    scaleX(0);
+
+  animation:
+    lineIn
+    0.8s
+    forwards
+    0.9s;
 }
+
 
 @keyframes fadeInHero {
+
   to {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+      translateY(0);
+
   }
+
 }
 
+
 @keyframes lineIn {
+
   to {
+
     opacity: 1;
-    transform: scaleX(1);
+
+    transform:
+      scaleX(1);
+
   }
+
 }
 
 
@@ -146,88 +266,140 @@ h1.hero-title {
 ========================================================= */
 
 h2 {
-  font-family: 'Cormorant Garamond', serif;
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
   font-size: 30px;
+
   font-weight: 600;
+
   text-align: center;
+
   margin-bottom: 40px;
+
   scroll-margin-top: 120px;
 }
 
+
 h3 {
-  font-family: 'Cormorant Garamond', serif;
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
   font-size: 26px;
+
   font-weight: 600;
+
   margin-top: 60px;
+
   margin-bottom: 20px;
 }
 
+
 p {
+
   font-size: 18px;
+
   margin: auto;
+
   line-height: 1.8;
 }
 
 
 /*
    WICHTIG:
-   Sections sind IMMER sichtbar.
-   Keine opacity:0 / IntersectionObserver-Abhängigkeit.
+   Alle Bereiche bleiben dauerhaft sichtbar.
 */
 
 .section {
+
   padding: 120px 0;
+
   opacity: 1;
+
   transform: none;
 }
 
+
 .content {
+
   max-width: 700px;
+
   margin: auto;
+
   text-align: center;
 }
 
 
 /* =========================================================
-   LEISTUNGSBEREICHE
+   LEISTUNGEN
 ========================================================= */
 
 .service-title {
-  font-family: 'Cormorant Garamond', serif;
+
+  font-family:
+    'Cormorant Garamond',
+    serif;
+
   font-size: 24px;
+
   font-weight: 600;
+
   margin-bottom: 15px;
 }
 
+
 .service-block {
+
   margin-bottom: 65px;
 }
 
+
 .service-block:last-child {
+
   margin-bottom: 0;
 }
 
+
 .service-list {
+
   text-align: left;
-  margin: 20px auto;
+
+  margin:
+    20px
+    auto;
+
   padding-left: 25px;
+
   max-width: 600px;
 }
 
+
 .service-list li {
+
   margin-bottom: 8px;
+
   font-size: 18px;
 }
 
+
 .intro-text {
+
   margin-bottom: 55px;
 }
 
+
 .highlight {
+
   margin-top: 30px;
 }
 
+
 .cta-text {
+
   margin-top: 40px;
 }
 
@@ -237,15 +409,25 @@ p {
 ========================================================= */
 
 .contact-link {
+
   color: #3e3e3e;
+
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: 0.3s;
+
+  border-bottom:
+    1px solid transparent;
+
+  transition:
+    0.3s;
 }
 
+
 .contact-link:hover {
+
   color: #b85c38;
-  border-bottom: 1px solid #b85c38;
+
+  border-bottom:
+    1px solid #b85c38;
 }
 
 
@@ -254,15 +436,23 @@ p {
 ========================================================= */
 
 .footer {
+
   margin-top: 120px;
+
   padding-bottom: 40px;
+
   font-size: 14px;
+
   opacity: 0.6;
+
   text-align: center;
 }
 
+
 .footer a {
+
   color: #3e3e3e;
+
   text-decoration: none;
 }
 
@@ -273,72 +463,118 @@ p {
 
 @media (max-width: 768px) {
 
+
   .container {
-    padding: 0 22px;
+
+    padding:
+      0 22px;
   }
 
+
+  /*
+     Navigation auf dem Handy ebenfalls
+     untereinander, damit die drei Punkte
+     nicht gequetscht werden.
+  */
+
   .nav {
+
     position: sticky;
+
     top: 0;
+
     left: 0;
+
     right: 0;
 
     display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
     justify-content: center;
-    gap: 18px;
 
-    padding: 14px 10px;
+    gap: 8px;
 
-    background: #f5efe6;
+    padding:
+      14px 10px;
+
+    background:
+      #f5efe6;
 
     font-size: 11px;
 
     z-index: 100;
   }
 
+
   .nav a {
+
     margin: 0;
   }
 
+
   .hero {
+
     min-height: 100vh;
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+    padding:
+      40px 20px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
   }
 
+
   h1.hero-title {
+
     white-space: normal;
+
     font-size: 30px;
-    padding: 0 10px;
+
+    padding:
+      0 10px;
   }
 
+
   .hero-sub {
+
     font-size: 20px;
   }
 
+
   h2 {
+
     font-size: 26px;
   }
 
+
   h3 {
+
     font-size: 23px;
   }
 
+
   .service-title {
+
     font-size: 22px;
   }
 
+
   p {
+
     font-size: 17px;
   }
 
+
   .service-list li {
+
     font-size: 17px;
   }
 
@@ -346,27 +582,36 @@ p {
 
 
 /* =========================================================
-   KLEINE BILDSCHIRME
+   SEHR KLEINE BILDSCHIRME
 ========================================================= */
 
 @media (max-width: 480px) {
 
+
   .nav {
-    gap: 10px;
+
+    gap: 7px;
+
     font-size: 10px;
   }
 
+
   .hero-sub {
+
     font-size: 19px;
   }
 
+
   .section {
-    padding: 90px 0;
+
+    padding:
+      90px 0;
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -402,14 +647,21 @@ p {
 <div class="hero">
 
   <h1 class="hero-title">
+
     HYGIENE&nbsp;•&nbsp;COMPLIANCE
+
   </h1>
 
+
   <div class="hero-sub">
+
     Hygiene. Qualität. Sicherheit.<br>
+
     Professionelles Hygiene- und Qualitätsmanagement
     für medizinische und pflegerische Einrichtungen.
+
   </div>
+
 
   <div class="hero-line"></div>
 
@@ -421,9 +673,15 @@ p {
      AMBITIONEN
 ========================================================= -->
 
-<section class="section" id="about">
+<section
+  class="section"
+  id="about"
+>
 
-  <div class="container content">
+  <div
+    class="container content"
+  >
+
 
     <h2>
       Ambitionen
@@ -510,6 +768,7 @@ p {
 
     </p>
 
+
   </div>
 
 </section>
@@ -520,9 +779,14 @@ p {
      ARBEITSWEISE & LEISTUNGEN
 ========================================================= -->
 
-<section class="section" id="arbeitsweise">
+<section
+  class="section"
+  id="arbeitsweise"
+>
 
-  <div class="container content">
+  <div
+    class="container content"
+  >
 
 
     <h2>
@@ -538,6 +802,7 @@ p {
         Hygiene. Qualität. Sicherheit.
       </h3>
 
+
       <p style="text-align:justify">
 
         <strong>
@@ -547,7 +812,9 @@ p {
 
       </p>
 
+
       <br>
+
 
       <p style="text-align:justify">
 
@@ -576,8 +843,12 @@ p {
     <div class="service-block">
 
       <div class="service-title">
-        Hygieneberatung &amp; individuelle Hygienekonzepte
+
+        Hygieneberatung &amp;
+        individuelle Hygienekonzepte
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -638,8 +909,11 @@ p {
     <div class="service-block">
 
       <div class="service-title">
+
         Hygienechecks &amp; Kontrollen
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -710,8 +984,12 @@ p {
     <div class="service-block">
 
       <div class="service-title">
-        Reinigungs-, Desinfektions- &amp; Qualitätsmanagement
+
+        Reinigungs-, Desinfektions- &amp;
+        Qualitätsmanagement
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -739,8 +1017,11 @@ p {
     <div class="service-block">
 
       <div class="service-title">
+
         Schulungen &amp; Unterweisungen
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -816,9 +1097,12 @@ p {
     <div class="service-block">
 
       <div class="service-title">
+
         Hygiene professionell organisieren –
         nachhaltig verbessern
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -870,13 +1154,17 @@ p {
 
 
 
-    <!-- FÜR WEN -->
+    <!-- FÜR MEDIZINISCHE UND PFLEGERISCHE EINRICHTUNGEN -->
 
     <div class="service-block">
 
       <div class="service-title">
-        Für medizinische &amp; pflegerische Einrichtungen
+
+        Für medizinische &amp;
+        pflegerische Einrichtungen
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -903,8 +1191,12 @@ p {
     <div class="service-block">
 
       <div class="service-title">
-        Ihr Vorteil: Hygiene, die im Alltag funktioniert
+
+        Ihr Vorteil:
+        Hygiene, die im Alltag funktioniert
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -922,9 +1214,13 @@ p {
       <p class="highlight">
 
         <strong>
+
           Für mehr Sicherheit.<br>
+
           Für mehr Qualität.<br>
+
           Für einen professionellen Hygienestandard.
+
         </strong>
 
       </p>
@@ -938,9 +1234,12 @@ p {
     <div class="service-block">
 
       <div class="service-title">
+
         Sie möchten Ihr Hygienemanagement überprüfen
         oder neu aufstellen?
+
       </div>
+
 
       <p style="text-align:justify">
 
@@ -953,8 +1252,10 @@ p {
       <p class="cta-text">
 
         <strong>
+
           Nehmen Sie Kontakt mit mir auf – gemeinsam finden
           wir die passende Lösung für Ihre Einrichtung.
+
         </strong>
 
       </p>
@@ -972,9 +1273,15 @@ p {
      KONTAKT
 ========================================================= -->
 
-<section class="section" id="contact">
+<section
+  class="section"
+  id="contact"
+>
 
-  <div class="container content">
+  <div
+    class="container content"
+  >
+
 
     <h2>
       Kontakt
@@ -1044,6 +1351,7 @@ p {
 
     </p>
 
+
   </div>
 
 </section>
@@ -1080,7 +1388,8 @@ p {
 
 /*
    Navigation:
-   Der aktuell sichtbare Bereich wird markiert.
+   Der aktuell sichtbare Bereich
+   wird oben rechts markiert.
 */
 
 const navLinks =
@@ -1095,6 +1404,7 @@ function updateNav() {
   let scrollPos =
     window.scrollY + 150;
 
+
   sectionElements.forEach(sec => {
 
     const sectionTop =
@@ -1106,11 +1416,15 @@ function updateNav() {
 
     if (
       scrollPos >= sectionTop &&
-      scrollPos < sectionTop + sectionHeight
+      scrollPos <
+      sectionTop + sectionHeight
     ) {
 
+
       navLinks.forEach(a => {
+
         a.classList.remove('active');
+
       });
 
 
@@ -1121,7 +1435,9 @@ function updateNav() {
 
 
       if (activeLink) {
+
         activeLink.classList.add('active');
+
       }
 
     }
@@ -1135,28 +1451,39 @@ function updateNav() {
    Beim Laden immer oben starten.
 */
 
-window.addEventListener('load', () => {
+window.addEventListener(
+  'load',
+  () => {
 
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 50);
+    setTimeout(
+      () => {
 
+        window.scrollTo(
+          0,
+          0
+        );
 
-  if (window.location.hash) {
-
-    history.replaceState(
-      null,
-      document.title,
-      window.location.pathname +
-      window.location.search
+      },
+      50
     );
 
+
+    if (window.location.hash) {
+
+      history.replaceState(
+        null,
+        document.title,
+        window.location.pathname +
+        window.location.search
+      );
+
+    }
+
+
+    updateNav();
+
   }
-
-
-  updateNav();
-
-});
+);
 
 
 window.addEventListener(
@@ -1168,4 +1495,5 @@ window.addEventListener(
 
 
 </body>
+
 </html>
