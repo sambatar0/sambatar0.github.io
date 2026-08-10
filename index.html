@@ -14,17 +14,17 @@
    GRUNDLAYOUT
 ========================================================= */
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  background:#f5efe6;
-  color:#3e3e3e;
-  font-family:'Inter',sans-serif;
-  font-weight:300;
-  line-height:1.8;
+body {
+  margin: 0;
+  background: #f5efe6;
+  color: #3e3e3e;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 
@@ -32,45 +32,45 @@ body{
    NAVIGATION
 ========================================================= */
 
-.nav{
-  position:fixed;
-  top:40px;
-  right:40px;
-  font-size:12px;
-  letter-spacing:1px;
-  z-index:100;
+.nav {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  z-index: 100;
 }
 
-.nav a{
-  text-decoration:none;
-  color:#3e3e3e;
-  margin-left:15px;
-  position:relative;
-  transition:color 0.3s;
+.nav a {
+  text-decoration: none;
+  color: #3e3e3e;
+  margin-left: 15px;
+  position: relative;
+  transition: color 0.3s;
 }
 
-.nav a.active{
-  color:#b85c38;
+.nav a.active {
+  color: #b85c38;
 }
 
-.nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:1px;
-  background:#3e3e3e;
-  transition:0.3s;
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #3e3e3e;
+  transition: 0.3s;
 }
 
-.nav a.active::after{
-  background:#b85c38;
-  width:100%;
+.nav a.active::after {
+  background: #b85c38;
+  width: 100%;
 }
 
-.nav a:hover::after{
-  width:100%;
+.nav a:hover::after {
+  width: 100%;
 }
 
 
@@ -78,62 +78,65 @@ body{
    HERO
 ========================================================= */
 
-.hero{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  min-height:80vh;
-  text-align:center;
-  padding:0 20px;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 0 20px;
 }
 
-h1.hero-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(28px,6vw,48px);
-  font-weight:300;
-  letter-spacing:1px;
-  margin-bottom:20px;
-  color:#3e3e3e;
-  text-shadow:1px 1px 4px rgba(0,0,0,0.1);
-  white-space:nowrap;
-  opacity:0;
-  transform:translateY(-20px);
-  animation:fadeInHero 1s forwards 0.3s;
+h1.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: #3e3e3e;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  white-space: nowrap;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInHero 1s forwards 0.3s;
 }
 
-.hero-sub{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(20px,4vw,34px);
-  font-weight:300;
-  text-align:center;
-  margin-top:20px;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeInHero 1s forwards 0.6s;
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInHero 1s forwards 0.6s;
 }
 
-.hero-line{
-  width:80px;
-  height:2px;
-  background:#3e3e3e;
-  margin:20px auto 60px;
-  opacity:0;
-  transform:scaleX(0);
-  animation:lineIn 0.8s forwards 0.9s;
+.hero-line {
+  width: 80px;
+  height: 2px;
+  background: #3e3e3e;
+  margin: 20px auto 60px;
+
+  opacity: 0;
+  transform: scaleX(0);
+  animation: lineIn 0.8s forwards 0.9s;
 }
 
-@keyframes fadeInHero{
-  to{
-    opacity:1;
-    transform:translateY(0);
+@keyframes fadeInHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes lineIn{
-  to{
-    opacity:1;
-    transform:scaleX(1);
+@keyframes lineIn {
+  to {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 
@@ -142,89 +145,90 @@ h1.hero-title{
    SECTIONS
 ========================================================= */
 
-h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:30px;
-  font-weight:600;
-  text-align:center;
-  margin-bottom:40px;
-  scroll-margin-top:120px;
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  scroll-margin-top: 120px;
 }
 
-h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:26px;
-  font-weight:600;
-  margin-top:60px;
-  margin-bottom:20px;
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
-p{
-  font-size:18px;
-  margin:auto;
-  line-height:1.8;
+p {
+  font-size: 18px;
+  margin: auto;
+  line-height: 1.8;
 }
 
-.section{
-  padding:120px 0;
-  opacity:0;
-  transform:translateY(50px);
-  transition:opacity 1s ease-out, transform 1s ease-out;
+
+/*
+   WICHTIG:
+   Sections sind IMMER sichtbar.
+   Keine opacity:0 / IntersectionObserver-Abhängigkeit.
+*/
+
+.section {
+  padding: 120px 0;
+  opacity: 1;
+  transform: none;
 }
 
-.section.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
-.content{
-  max-width:700px;
-  margin:auto;
-  text-align:center;
+.content {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
 }
 
 
 /* =========================================================
-   TEXT & LEISTUNGEN
+   LEISTUNGSBEREICHE
 ========================================================= */
 
-.service-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:24px;
-  font-weight:600;
-  margin-bottom:15px;
+.service-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.service-block{
-  margin-bottom:60px;
+.service-block {
+  margin-bottom: 65px;
 }
 
-.service-block:last-child{
-  margin-bottom:0;
+.service-block:last-child {
+  margin-bottom: 0;
 }
 
-.service-list{
-  text-align:left;
-  margin:20px auto;
-  padding-left:25px;
-  max-width:600px;
+.service-list {
+  text-align: left;
+  margin: 20px auto;
+  padding-left: 25px;
+  max-width: 600px;
 }
 
-.service-list li{
-  margin-bottom:8px;
-  font-size:18px;
+.service-list li {
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
-.intro-text{
-  margin-bottom:50px;
+.intro-text {
+  margin-bottom: 55px;
 }
 
-.highlight{
-  margin-top:30px;
+.highlight {
+  margin-top: 30px;
 }
 
-.cta-text{
-  margin-top:40px;
+.cta-text {
+  margin-top: 40px;
 }
 
 
@@ -232,16 +236,16 @@ p{
    KONTAKT
 ========================================================= */
 
-.contact-link{
-  color:#3e3e3e;
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-  transition:0.3s;
+.contact-link {
+  color: #3e3e3e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
 }
 
-.contact-link:hover{
-  color:#b85c38;
-  border-bottom:1px solid #b85c38;
+.contact-link:hover {
+  color: #b85c38;
+  border-bottom: 1px solid #b85c38;
 }
 
 
@@ -249,17 +253,17 @@ p{
    FOOTER
 ========================================================= */
 
-.footer{
-  margin-top:120px;
-  padding-bottom:40px;
-  font-size:14px;
-  opacity:0.6;
-  text-align:center;
+.footer {
+  margin-top: 120px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: center;
 }
 
-.footer a{
-  color:#3e3e3e;
-  text-decoration:none;
+.footer a {
+  color: #3e3e3e;
+  text-decoration: none;
 }
 
 
@@ -267,68 +271,97 @@ p{
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-  .container{
-    padding:80px 22px;
+  .container {
+    padding: 0 22px;
   }
 
-  .nav{
-    position:sticky;
-    top:0;
-    left:0;
-    right:0;
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    padding:14px 10px;
-    background:#f5efe6;
-    font-size:11px;
-    z-index:100;
+  .nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 14px 10px;
+
+    background: #f5efe6;
+
+    font-size: 11px;
+
+    z-index: 100;
   }
 
-  .nav a{
-    margin:0;
+  .nav a {
+    margin: 0;
   }
 
-  .hero{
-    min-height:100vh;
-    padding-top:40px;
-    padding-bottom:40px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+  .hero {
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
   }
 
-  h1.hero-title{
-    white-space:normal;
-    font-size:30px;
-    padding:0 10px;
+  h1.hero-title {
+    white-space: normal;
+    font-size: 30px;
+    padding: 0 10px;
   }
 
-  .hero-sub{
-    font-size:20px;
+  .hero-sub {
+    font-size: 20px;
   }
 
-  h2{
-    font-size:26px;
+  h2 {
+    font-size: 26px;
   }
 
-  h3{
-    font-size:23px;
+  h3 {
+    font-size: 23px;
   }
 
-  .service-title{
-    font-size:22px;
+  .service-title {
+    font-size: 22px;
   }
 
-  p{
-    font-size:17px;
+  p {
+    font-size: 17px;
   }
 
-  .service-list li{
-    font-size:17px;
+  .service-list li {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   KLEINE BILDSCHIRME
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .nav {
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .hero-sub {
+    font-size: 19px;
+  }
+
+  .section {
+    padding: 90px 0;
   }
 
 }
@@ -351,7 +384,7 @@ p{
   </a>
 
   <a href="#arbeitsweise">
-    Arbeitsweise
+    Arbeitsweise &amp; Leistungen
   </a>
 
   <a href="#contact">
@@ -373,12 +406,9 @@ p{
   </h1>
 
   <div class="hero-sub">
-
     Hygiene. Qualität. Sicherheit.<br>
-
     Professionelles Hygiene- und Qualitätsmanagement
     für medizinische und pflegerische Einrichtungen.
-
   </div>
 
   <div class="hero-line"></div>
@@ -541,9 +571,7 @@ p{
 
 
 
-    <!-- =====================================================
-         HYGIENEBERATUNG
-    ====================================================== -->
+    <!-- HYGIENEBERATUNG -->
 
     <div class="service-block">
 
@@ -605,9 +633,7 @@ p{
 
 
 
-    <!-- =====================================================
-         HYGIENECHECKS
-    ====================================================== -->
+    <!-- HYGIENECHECKS -->
 
     <div class="service-block">
 
@@ -679,9 +705,7 @@ p{
 
 
 
-    <!-- =====================================================
-         REINIGUNG / DESINFEKTION / QUALITÄT
-    ====================================================== -->
+    <!-- REINIGUNG / DESINFEKTION / QUALITÄT -->
 
     <div class="service-block">
 
@@ -710,9 +734,7 @@ p{
 
 
 
-    <!-- =====================================================
-         SCHULUNGEN
-    ====================================================== -->
+    <!-- SCHULUNGEN -->
 
     <div class="service-block">
 
@@ -789,9 +811,7 @@ p{
 
 
 
-    <!-- =====================================================
-         HYGIENE PROFESSIONELL ORGANISIEREN
-    ====================================================== -->
+    <!-- HYGIENE PROFESSIONELL ORGANISIEREN -->
 
     <div class="service-block">
 
@@ -850,9 +870,7 @@ p{
 
 
 
-    <!-- =====================================================
-         ZIELGRUPPE
-    ====================================================== -->
+    <!-- FÜR WEN -->
 
     <div class="service-block">
 
@@ -880,9 +898,7 @@ p{
 
 
 
-    <!-- =====================================================
-         IHR VORTEIL
-    ====================================================== -->
+    <!-- IHR VORTEIL -->
 
     <div class="service-block">
 
@@ -917,9 +933,7 @@ p{
 
 
 
-    <!-- =====================================================
-         ABSCHLUSS / CTA
-    ====================================================== -->
+    <!-- ABSCHLUSS -->
 
     <div class="service-block">
 
@@ -1064,42 +1078,10 @@ p{
 
 <script>
 
-/* =========================================================
-   FADE-IN SECTIONS
-========================================================= */
-
-const sections =
-  document.querySelectorAll('.section');
-
-const observer =
-  new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add('visible');
-
-      }
-
-    });
-
-  },{
-    threshold:0.2
-  });
-
-
-sections.forEach(section => {
-
-  observer.observe(section);
-
-});
-
-
-
-/* =========================================================
-   AKTIVE NAVIGATION
-========================================================= */
+/*
+   Navigation:
+   Der aktuell sichtbare Bereich wird markiert.
+*/
 
 const navLinks =
   document.querySelectorAll('.nav a');
@@ -1108,11 +1090,10 @@ const sectionElements =
   document.querySelectorAll('section');
 
 
-function updateNav(){
+function updateNav() {
 
   let scrollPos =
     window.scrollY + 150;
-
 
   sectionElements.forEach(sec => {
 
@@ -1123,17 +1104,15 @@ function updateNav(){
       sec.offsetHeight;
 
 
-    navLinks.forEach(a => {
-
-      a.classList.remove('active');
-
-    });
-
-
-    if(
+    if (
       scrollPos >= sectionTop &&
       scrollPos < sectionTop + sectionHeight
-    ){
+    ) {
+
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+      });
+
 
       const activeLink =
         document.querySelector(
@@ -1141,10 +1120,8 @@ function updateNav(){
         );
 
 
-      if(activeLink){
-
+      if (activeLink) {
         activeLink.classList.add('active');
-
       }
 
     }
@@ -1154,21 +1131,18 @@ function updateNav(){
 }
 
 
-
-/* =========================================================
-   SEITE BEIM LADEN OBEN STARTEN
-========================================================= */
+/*
+   Beim Laden immer oben starten.
+*/
 
 window.addEventListener('load', () => {
 
   setTimeout(() => {
-
-    window.scrollTo(0,0);
-
-  },50);
+    window.scrollTo(0, 0);
+  }, 50);
 
 
-  if(window.location.hash){
+  if (window.location.hash) {
 
     history.replaceState(
       null,
