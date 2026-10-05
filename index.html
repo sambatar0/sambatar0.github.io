@@ -1,1477 +1,887 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<title>hygiene.compliance | Hygieneseminare &amp; Hygieneberatung</title>
+<meta name="description" content="Hygieneseminare, Hygienekonzepte und Hygieneberatung für medizinische und pflegerische Einrichtungen, Schulen, Kindergärten sowie Tattoo- und Kosmetikstudios: Basishygiene, Händehygiene, Flächenhygiene, Multiresistente Erreger, Hygienepläne und Hygieneunterlagen.">
 
-<title>
-  hygiene.compliance | Hygiene. Qualität. Sicherheit.
-</title>
+<!-- Vorschau beim Teilen des Links (WhatsApp, LinkedIn usw.) -->
+<meta property="og:title" content="hygiene.compliance | Hygieneseminare &amp; Hygieneberatung">
+<meta property="og:description" content="Praxisnahe Hygieneseminare und Hygienekonzepte für Pflege, Medizin, Schulen, Kindergärten sowie Tattoo- und Kosmetikstudios.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.hygienecompliance.de/">
 
+<!-- Schriften über Bunny Fonts statt Google Fonts (datenschutzfreundlicher, gleiche Schriften) -->
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=cormorant-garamond:300,400,600|inter:200,300,400,500&display=swap" rel="stylesheet">
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@200;300;400&display=swap"
-  rel="stylesheet"
->
-
+<!-- Strukturierte Daten für Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "hygiene.compliance – Lisa Sambataro",
+  "url": "https://www.hygienecompliance.de/",
+  "email": "hyg.sambataro@web.de",
+  "telephone": "+491774159981",
+  "description": "Hygieneseminare, Hygieneschulungen, Hygienekonzepte und Hygieneberatung für medizinische und pflegerische Einrichtungen, Gemeinschaftseinrichtungen wie Schulen und Kindergärten sowie Tattoo- und Kosmetikstudios.",
+  "sameAs": ["https://www.instagram.com/hygiene.compliance"]
+}
+</script>
 
 <style>
-
 /* =========================================================
-   GRUNDLAYOUT
+   FARBEN – hier zentral änderbar
 ========================================================= */
-
-html {
-  scroll-behavior: smooth;
+:root {
+  --bg: #f5efe6;          /* dein Creme-Hintergrund */
+  --bg-soft: #efe7db;     /* etwas dunkler, für abgesetzte Bereiche */
+  --text: #3e3e3e;        /* dein Anthrazit */
+  --muted: #77716a;       /* gedämpfter Text */
+  --line: #d9cfc1;        /* feine Linien */
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #f5efe6;
-  color: #3e3e3e;
+  background: var(--bg);
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   font-weight: 300;
+  font-size: 17px;
   line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+
+p { margin: 0 0 16px; }
+
+strong { font-weight: 500; }
+
+a { color: var(--text); }
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
 
 /* =========================================================
-   NAVIGATION – OBEN RECHTS UNTEREINANDER
+   NAVIGATION – OBEN RECHTS UNTEREINANDER (wie bisher)
 ========================================================= */
-
 .nav {
   position: fixed;
-
   top: 40px;
   right: 40px;
-
   display: flex;
   flex-direction: column;
-
   align-items: flex-end;
-
   gap: 12px;
-
   font-size: 12px;
   letter-spacing: 1px;
-
   z-index: 100;
 }
 
 .nav a {
   text-decoration: none;
-
-  color: #3e3e3e;
-
-  margin-left: 0;
-
+  color: var(--text);
   position: relative;
-
-  transition:
-    color 0.3s ease;
-}
-
-.nav a.active {
-  color: #b85c38;
+  transition: opacity .3s ease;
 }
 
 .nav a::after {
   content: "";
-
   position: absolute;
-
   right: 0;
   bottom: -4px;
-
   width: 0;
   height: 1px;
-
-  background: #3e3e3e;
-
-  transition: width 0.3s ease;
+  background: var(--text);
+  transition: width .3s ease;
 }
 
-.nav a.active::after {
-  background: #b85c38;
+.nav a:hover::after,
+.nav a.active::after { width: 100%; }
 
-  width: 100%;
-}
-
-.nav a:hover {
-  color: #b85c38;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
+.nav a.active { font-weight: 500; }
 
 
 /* =========================================================
-   HERO
+   HERO (wie bisher, mit Animation)
 ========================================================= */
-
 .hero {
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
-  min-height: 80vh;
-
+  min-height: 72vh;
   text-align: center;
-
   padding: 0 20px;
 }
 
-
-h1.hero-title {
-
+.hero-title {
   font-family: 'Cormorant Garamond', serif;
-
-  font-size: clamp(
-    28px,
-    6vw,
-    48px
-  );
-
+  font-size: clamp(28px, 6vw, 48px);
   font-weight: 300;
-
   letter-spacing: 1px;
-
   margin-bottom: 20px;
-
-  color: #3e3e3e;
-
-  text-shadow:
-    1px 1px 4px rgba(
-      0,
-      0,
-      0,
-      0.1
-    );
-
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
-
   opacity: 0;
-
-  transform:
-    translateY(-20px);
-
-  animation:
-    fadeInHero
-    1s
-    forwards
-    0.3s;
+  transform: translateY(-20px);
+  animation: fadeIn 1s forwards .3s;
 }
-
 
 .hero-sub {
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
-  font-size:
-    clamp(
-      20px,
-      4vw,
-      34px
-    );
-
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 3.4vw, 30px);
   font-weight: 300;
-
-  text-align: center;
-
-  margin-top: 20px;
-
+  max-width: 760px;
+  margin: 10px auto 0;
   opacity: 0;
-
-  transform:
-    translateY(20px);
-
-  animation:
-    fadeInHero
-    1s
-    forwards
-    0.6s;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards .6s;
 }
-
 
 .hero-line {
-
   width: 80px;
-
   height: 2px;
-
-  background: #3e3e3e;
-
-  margin:
-    20px
-    auto
-    60px;
-
+  background: var(--text);
+  margin: 34px auto 40px;
   opacity: 0;
-
-  transform:
-    scaleX(0);
-
-  animation:
-    lineIn
-    0.8s
-    forwards
-    0.9s;
+  transform: scaleX(0);
+  animation: lineIn .8s forwards .9s;
 }
 
-
-@keyframes fadeInHero {
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translateY(0);
-
-  }
-
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.1s;
 }
 
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes lineIn { to { opacity: 1; transform: scaleX(1); } }
 
-@keyframes lineIn {
 
-  to {
-
-    opacity: 1;
-
-    transform:
-      scaleX(1);
-
-  }
-
+/* =========================================================
+   BUTTONS – schlicht, ohne Farbe
+========================================================= */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid var(--text);
+  transition: background .3s, color .3s;
 }
+
+.btn-dark { background: var(--text); color: var(--bg); }
+.btn-dark:hover { background: transparent; color: var(--text); }
+
+.btn-light { background: transparent; color: var(--text); }
+.btn-light:hover { background: var(--text); color: var(--bg); }
 
 
 /* =========================================================
    SECTIONS
 ========================================================= */
-
-h2 {
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
-  font-size: 30px;
-
-  font-weight: 600;
-
-  text-align: center;
-
-  margin-bottom: 40px;
-
-  scroll-margin-top: 120px;
-}
-
-
-h3 {
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
-  font-size: 26px;
-
-  font-weight: 600;
-
-  margin-top: 60px;
-
-  margin-bottom: 20px;
-}
-
-
-p {
-
-  font-size: 18px;
-
-  margin: auto;
-
-  line-height: 1.8;
-}
-
-
-/*
-   WICHTIG:
-   Alle Bereiche bleiben dauerhaft sichtbar.
-*/
-
 .section {
-
-  padding: 120px 0;
-
-  opacity: 1;
-
-  transform: none;
+  padding: 110px 0;
+  scroll-margin-top: 20px;
 }
 
+.section-soft { background: var(--bg-soft); }
 
-.content {
-
-  max-width: 700px;
-
-  margin: auto;
-
+.section-head {
   text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 600;
+}
+
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: var(--text);
+  margin: 20px auto 0;
+}
+
+.section-head p { color: var(--muted); margin-top: 20px; }
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
 }
 
 
 /* =========================================================
-   LEISTUNGEN
+   KARTEN – feine Linien, kein Schatten
 ========================================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
 
-.service-title {
+.card {
+  padding: 34px 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  transition: background .3s;
+}
 
-  font-family:
-    'Cormorant Garamond',
-    serif;
+.card:hover { background: rgba(255, 255, 255, 0.35); }
 
-  font-size: 24px;
+.card .tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
 
+.card h3 {
+  font-size: 25px;
   font-weight: 600;
+  margin-bottom: 12px;
+}
 
-  margin-bottom: 15px;
+.card p {
+  font-size: 16px;
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.card li { margin-bottom: 4px; }
+
+.card-link {
+  align-self: flex-start;
+  font-size: 13px;
+  letter-spacing: .5px;
+  text-decoration: none;
+  margin-top: 8px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--text);
+  transition: opacity .3s;
+}
+
+.card-link:hover { opacity: .6; }
+
+.card-dark {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.card-dark:hover { background: #333; }
+.card-dark p, .card-dark .tag { color: #cfc7bc; }
+.card-dark .card-link { color: var(--bg); border-color: var(--bg); }
+
+
+/* Zielgruppen */
+.audience {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.audience div {
+  padding: 34px 20px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.audience div + div { border-left: 1px solid var(--line); }
+
+.audience strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* Rahmenbedingungen */
+.conditions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 26px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.conditions div { font-size: 15px; color: var(--muted); }
+
+.conditions strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 
-.service-block {
+/* =========================================================
+   ÜBER MICH
+========================================================= */
+.about {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
 
-  margin-bottom: 65px;
+.about > div { flex: 1; }
+
+.about img {
+  flex: 0 0 300px;
+  width: 300px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: grayscale(15%);
+}
+
+.about h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 600;
+}
+
+.qualifications {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.qualifications li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.note {
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
 }
 
 
-.service-block:last-child {
-
-  margin-bottom: 0;
+/* =========================================================
+   ABLAUF
+========================================================= */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  text-align: center;
+  counter-reset: step;
 }
 
-
-.service-list {
-
-  text-align: left;
-
-  margin:
-    20px
-    auto;
-
-  padding-left: 25px;
-
-  max-width: 600px;
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 18px;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
 }
 
-
-.service-list li {
-
-  margin-bottom: 8px;
-
-  font-size: 18px;
-}
-
-
-.intro-text {
-
-  margin-bottom: 55px;
-}
-
-
-.highlight {
-
-  margin-top: 30px;
-}
-
-
-.cta-text {
-
-  margin-top: 40px;
-}
+.step h3 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+.step p { color: var(--muted); font-size: 16px; margin: 0; }
 
 
 /* =========================================================
    KONTAKT
 ========================================================= */
+.contact { text-align: center; }
+
+.contact-list {
+  font-size: 18px;
+  line-height: 2.2;
+}
+
+.contact-list span {
+  display: inline-block;
+  min-width: 90px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 
 .contact-link {
-
-  color: #3e3e3e;
-
   text-decoration: none;
-
-  border-bottom:
-    1px solid transparent;
-
-  transition:
-    0.3s;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
 }
 
-
-.contact-link:hover {
-
-  color: #b85c38;
-
-  border-bottom:
-    1px solid #b85c38;
-}
+.contact-link:hover { border-bottom-color: var(--text); }
 
 
 /* =========================================================
    FOOTER
 ========================================================= */
-
 .footer {
-
-  margin-top: 120px;
-
-  padding-bottom: 40px;
-
+  padding: 40px 0;
   font-size: 14px;
-
-  opacity: 0.6;
-
+  opacity: .6;
   text-align: center;
 }
 
-
-.footer a {
-
-  color: #3e3e3e;
-
-  text-decoration: none;
-}
+.footer a { text-decoration: none; }
 
 
 /* =========================================================
-   MOBILE
+   MOBIL
 ========================================================= */
-
-@media (max-width: 768px) {
-
-
-  .container {
-
-    padding:
-      0 22px;
-  }
-
-
-  /*
-     Navigation auf dem Handy ebenfalls
-     untereinander, damit die drei Punkte
-     nicht gequetscht werden.
-  */
+@media (max-width: 900px) {
 
   .nav {
-
     position: sticky;
-
     top: 0;
-
     left: 0;
-
     right: 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-
-    gap: 8px;
-
-    padding:
-      14px 10px;
-
-    background:
-      #f5efe6;
-
+    gap: 6px 22px;
+    padding: 14px 10px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
     font-size: 11px;
-
-    z-index: 100;
   }
 
+  .nav a::after { left: 0; right: auto; }
 
-  .nav a {
+  .hero { min-height: 85vh; padding: 40px 20px; }
 
-    margin: 0;
-  }
+  .hero-title { white-space: normal; }
 
+  .section { padding: 80px 0; scroll-margin-top: 60px; }
 
-  .hero {
+  .grid { grid-template-columns: 1fr; }
+  .audience { grid-template-columns: 1fr 1fr; }
+  .audience div + div { border-left: none; }
+  .audience div:nth-child(even) { border-left: 1px solid var(--line); }
+  .audience div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .about { flex-direction: column; gap: 34px; }
+  .about img { flex: none; width: 100%; max-width: 280px; }
 
-    min-height: 100vh;
-
-    padding:
-      40px 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-  }
-
-
-  h1.hero-title {
-
-    white-space: normal;
-
-    font-size: 30px;
-
-    padding:
-      0 10px;
-  }
-
-
-  .hero-sub {
-
-    font-size: 20px;
-  }
-
-
-  h2 {
-
-    font-size: 26px;
-  }
-
-
-  h3 {
-
-    font-size: 23px;
-  }
-
-
-  .service-title {
-
-    font-size: 22px;
-  }
-
-
-  p {
-
-    font-size: 17px;
-  }
-
-
-  .service-list li {
-
-    font-size: 17px;
-  }
-
+  .wrap { padding: 0 22px; }
 }
-
-
-/* =========================================================
-   SEHR KLEINE BILDSCHIRME
-========================================================= */
-
-@media (max-width: 480px) {
-
-
-  .nav {
-
-    gap: 7px;
-
-    font-size: 10px;
-  }
-
-
-  .hero-sub {
-
-    font-size: 19px;
-  }
-
-
-  .section {
-
-    padding:
-      90px 0;
-  }
-
-}
-
 </style>
-
 </head>
 
-
 <body>
-
 
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
-
-<div class="nav">
-
-  <a href="#about">
-    Ambitionen
-  </a>
-
-  <a href="#arbeitsweise">
-    Arbeitsweise &amp; Leistungen
-  </a>
-
-  <a href="#contact">
-    Kontakt
-  </a>
-
-</div>
-
+<nav class="nav">
+  <a href="#seminare">Seminare</a>
+  <a href="#beratung">Beratung</a>
+  <a href="#ueber-mich">Über mich</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
 
 
 <!-- =========================================================
      HERO
 ========================================================= -->
+<header class="hero">
 
-<div class="hero">
-
-  <h1 class="hero-title">
-
-    HYGIENE&nbsp;•&nbsp;COMPLIANCE
-
-  </h1>
-
+  <h1 class="hero-title">HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
 
   <div class="hero-sub">
-
-    Hygiene. Qualität. Sicherheit.<br>
-
-    Professionelles Hygiene- und Qualitätsmanagement
-    für medizinische und pflegerische Einrichtungen.
-
+    Hygieneseminare, Hygienekonzepte und Beratung<br>
+    für Einrichtungen mit besonderen hygienischen Anforderungen
   </div>
-
 
   <div class="hero-line"></div>
 
-</div>
-
-
-
-<!-- =========================================================
-     AMBITIONEN
-========================================================= -->
-
-<section
-  class="section"
-  id="about"
->
-
-  <div
-    class="container content"
-  >
-
-
-    <h2>
-      Ambitionen
-    </h2>
-
-
-    <p style="text-align:justify">
-
-      Als <strong>staatlich anerkannte Hygienekontrolleurin
-      und Desinfektorin</strong> verfüge ich über fundiertes
-      Fachwissen und umfassende Erfahrung im Bereich Hygiene,
-      Desinfektion und hygienischer Qualitätsstandards.
-
-      Ich unterstütze <strong>medizinische und pflegerische
-      Einrichtungen, stationäre Betriebe sowie Unternehmen
-      und Einrichtungen mit besonderen hygienischen
-      Anforderungen</strong> dabei, gesetzliche und fachliche
-      Anforderungen sicher und praxisnah umzusetzen.
-
-      Dabei geht es nicht nur darum, Vorgaben einzuhalten.
-      Gemeinsam schaffen wir klare Strukturen,
-      nachvollziehbare Abläufe und nachhaltige
-      Hygienestandards, die im täglichen Betrieb
-      tatsächlich funktionieren.
-
-      Von der Entwicklung individueller Hygienekonzepte
-      und Hygienepläne über die Optimierung von Reinigungs-
-      und Desinfektionsabläufen bis hin zu Dokumentation,
-      Hygienechecks, Kontrollen und praxisnahen Schulungen
-      begleite ich Sie umfassend und lösungsorientiert.
-
-    </p>
-
-
-    <br>
-
-
-    <p style="text-align:justify">
-
-      <strong>Meine Überzeugung:</strong>
-
-      Sie sind die Expertin oder der Experte Ihres Fachgebiets –
-      <strong>ich bin die Expertin für Hygiene.</strong>
-
-      Sie kümmern sich um Ihre Patienten, Bewohner, Kunden
-      und Ihren täglichen Betriebsablauf. Ich unterstütze Sie
-      dabei, alle hygienerelevanten Prozesse professionell zu
-      gestalten, zu überprüfen und kontinuierlich
-      weiterzuentwickeln.
-
-      Mein Anspruch ist es, Hygiene nicht als lästige Pflicht,
-      sondern als selbstverständlichen Bestandteil von
-      <strong>Qualität, Sicherheit und Professionalität</strong>
-      zu etablieren.
-
-      Dabei erhalten Sie keine Lösungen von der Stange:
-      Ich entwickle und begleite Hygienemaßnahmen, die zu
-      Ihrer Einrichtung, Ihren Mitarbeitenden und Ihren
-      individuellen Arbeitsabläufen passen.
-
-      Denn professionelle Hygiene schafft Sicherheit –
-      für Ihre Mitarbeitenden, Ihre Patienten, Bewohner,
-      Kunden und letztlich für Ihren gesamten Betrieb.
-
-    </p>
-
-
-    <br>
-
-
-    <p style="text-align:justify">
-
-      <strong>Wichtiger Hinweis:</strong>
-
-      Ich übe diese Tätigkeit nebenberuflich aus und übernehme
-      keine hoheitlichen oder behördlichen Funktionen.
-
-      Meine Leistungen erfolgen unabhängig und ersetzen keine
-      amtlichen Kontrollen oder Entscheidungen von Behörden.
-
-      Mit meiner Qualifikation und Erfahrung unterstütze ich
-      Sie dabei, Ihren Betrieb hygienisch sicher,
-      professionell und strukturiert aufzustellen.
-
-    </p>
-
-
+  <div class="hero-buttons">
+    <a class="btn btn-dark" href="#seminare">SEMINARE ANSEHEN</a>
+    <a class="btn btn-light" href="#kontakt">ERSTGESPRÄCH VEREINBAREN</a>
   </div>
 
+</header>
+
+
+<main>
+
+<!-- =========================================================
+     FÜR WEN
+========================================================= -->
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="audience">
+      <div><strong>Pflege</strong>Pflegeheime, ambulante Dienste, Tagespflege</div>
+      <div><strong>Medizin</strong>Praxen und medizinische Einrichtungen</div>
+      <div><strong>Gemeinschaft</strong>Schulen, Kindergärten und Kitas</div>
+      <div><strong>Studios</strong>Tattoo- und Kosmetikstudios</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SEMINARE
+========================================================= -->
+<section class="section section-soft" id="seminare">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Seminare &amp; Schulungen</div>
+      <h2>Hygieneseminare für Ihre Einrichtung</h2>
+      <p>
+        Für Pflege, medizinische Einrichtungen, Schulen und Kindergärten. Jedes Seminar
+        ist als Tagesseminar buchbar oder wird auf die Abläufe, den Wissensstand und
+        die Fragen Ihres Teams angepasst.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="tag">Grundlagen</div>
+        <h3>Basishygiene</h3>
+        <p>
+          Die Grundlagen hygienischen Arbeitens: Übertragungswege,
+          Standardhygienemaßnahmen, persönliche Hygiene und Schutzausrüstung.
+          Ideal für neue Mitarbeitende.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20Basishygiene">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Grundlagen</div>
+        <h3>Händehygiene</h3>
+        <p>
+          Händedesinfektion richtig durchführen, die passenden Momente erkennen,
+          Hautschutz und typische Fehler im Alltag – anschaulich und praxisnah.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20H%C3%A4ndehygiene">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Reinigung &amp; Desinfektion</div>
+        <h3>Flächenhygiene</h3>
+        <p>
+          Reinigung oder Desinfektion? Auswahl und richtige Anwendung von Mitteln,
+          Einwirkzeiten, Abläufe und Dokumentation.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20Fl%C3%A4chenhygiene">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Fachthema</div>
+        <h3>Multiresistente Erreger</h3>
+        <p>
+          Was hinter MRSA, VRE und MRGN steckt, wie sie übertragen werden und welche
+          Maßnahmen im Alltag wirklich nötig sind – ohne Verunsicherung im Team.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20Multiresistente%20Erreger">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Organisation</div>
+        <h3>Hygiene in Einrichtungen</h3>
+        <p>
+          Hygienemanagement im Überblick: Hygieneplan, Zuständigkeiten,
+          Abläufe und Dokumentation – abgestimmt auf Ihre Einrichtung.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20Hygiene%20in%20Einrichtungen">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Auffrischung</div>
+        <h3>Hygiene-Refresher</h3>
+        <p>
+          Kompakte Auffrischung für Teams mit Vorwissen: Wissen festigen,
+          Routinen überprüfen und Fragen aus dem Arbeitsalltag klären.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Seminaranfrage%3A%20Hygiene-Refresher">Seminar anfragen</a>
+      </div>
+
+      <div class="card">
+        <div class="tag">Einweisung</div>
+        <h3>Hygieneeinweisung &amp; Einarbeitung von Reinigungskräften</h3>
+        <p>
+          Strukturierte Einweisung neuer Mitarbeitender und Reinigungskräfte in die
+          Hygienevorgaben Ihrer Einrichtung – verständlich, praxisnah und dokumentiert.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Hygieneeinweisung%20%2F%20Einarbeitung">Einweisung anfragen</a>
+      </div>
+
+      <div class="card card-dark">
+        <div class="tag">Nach Maß</div>
+        <h3>Individuelle Hygieneschulung</h3>
+        <p>
+          Sie haben ein eigenes Thema oder einen konkreten Anlass? Inhalt, Umfang
+          und Schwerpunkte stimmen wir gemeinsam auf Ihre Einrichtung ab.
+        </p>
+        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Individuelle%20Hygieneschulung">Individuelle Schulung anfragen</a>
+      </div>
+
+    </div>
+
+    <div class="conditions">
+      <div><strong>Format</strong>Tagesseminar oder individuell angepasster Umfang</div>
+      <div><strong>Ort</strong>Inhouse in Ihrer Einrichtung</div>
+      <div><strong>Inhalte</strong>Abgestimmt auf Ihre Abläufe und Ihr Team</div>
+      <div><strong>Preis</strong>Nach Aufwand, transparent und vorab abgesprochen</div>
+    </div>
+
+  </div>
 </section>
 
 
-
 <!-- =========================================================
-     ARBEITSWEISE & LEISTUNGEN
+     BERATUNG
 ========================================================= -->
+<section class="section" id="beratung">
+  <div class="wrap">
 
-<section
-  class="section"
-  id="arbeitsweise"
->
-
-  <div
-    class="container content"
-  >
-
-
-    <h2>
-      Arbeitsweise &amp; Leistungen
-    </h2>
-
-
-    <!-- EINLEITUNG -->
-
-    <div class="intro-text">
-
-      <h3>
-        Hygiene. Qualität. Sicherheit.
-      </h3>
-
-
-      <p style="text-align:justify">
-
-        <strong>
-          Professionelles Hygiene- und Qualitätsmanagement
-          für medizinische und pflegerische Einrichtungen
-        </strong>
-
+    <div class="section-head">
+      <div class="eyebrow">Hygieneberatung</div>
+      <h2>Unterstützung über das Seminar hinaus</h2>
+      <p>
+        Wenn Sie Ihr Hygienemanagement neu aufstellen oder bestehende Abläufe
+        überprüfen möchten, begleite ich Sie auch direkt in der Umsetzung.
       </p>
-
-
-      <br>
-
-
-      <p style="text-align:justify">
-
-        Hygiene ist mehr als die Einhaltung von Vorschriften –
-        sie schafft Sicherheit, Vertrauen und Qualität im
-        täglichen Arbeitsalltag.
-
-        Ich unterstütze medizinische und pflegerische
-        Einrichtungen dabei, ihre Hygieneprozesse
-        professionell zu strukturieren, gesetzliche und
-        fachliche Anforderungen sicher umzusetzen und
-        nachhaltige Qualitätsstandards zu etablieren.
-
-        Dabei erhalten Sie eine individuelle Betreuung,
-        die zu Ihrer Einrichtung, Ihren Abläufen und
-        Ihren Anforderungen passt.
-
-      </p>
-
     </div>
 
+    <div class="grid">
 
-
-    <!-- HYGIENEBERATUNG -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Hygieneberatung &amp;
-        individuelle Hygienekonzepte
-
+      <div class="card">
+        <h3>Hygienekonzepte &amp; -pläne</h3>
+        <p>Erstellung und Überarbeitung von Unterlagen, die zu Ihren tatsächlichen Abläufen passen:</p>
+        <ul>
+          <li>Hygienekonzepte und Hygienepläne</li>
+          <li>Reinigungs- und Desinfektionspläne</li>
+          <li>Arbeits- und Verfahrensanweisungen</li>
+          <li>Dokumentationsunterlagen</li>
+        </ul>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Jede Einrichtung ist anders. Deshalb entwickle ich
-        individuelle Hygienelösungen, die sich an Ihren
-        tatsächlichen Arbeitsabläufen orientieren.
-
-        Ich unterstütze Sie unter anderem bei der Erstellung
-        und Überarbeitung von:
-
-      </p>
-
-
-      <ul class="service-list">
-
-        <li>
-          Hygienekonzepten
-        </li>
-
-        <li>
-          Hygieneplänen
-        </li>
-
-        <li>
-          Reinigungs- und Desinfektionsplänen
-        </li>
-
-        <li>
-          Arbeits- und Verfahrensanweisungen
-        </li>
-
-        <li>
-          Hygiene- und Dokumentationsunterlagen
-        </li>
-
-        <li>
-          individuellen Maßnahmen zur Verbesserung
-          Ihrer Hygieneprozesse
-        </li>
-
-      </ul>
-
-
-      <p style="text-align:justify">
-
-        Mein Ziel: Hygiene soll nicht nur auf dem Papier
-        funktionieren, sondern im täglichen Arbeitsablauf
-        zuverlässig umgesetzt werden.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- HYGIENECHECKS -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Hygienechecks &amp; Kontrollen
-
+      <div class="card">
+        <h3>Hygienechecks</h3>
+        <p>Ein strukturierter Blick auf Ihre Abläufe vor Ort, mit klaren Empfehlungen:</p>
+        <ul>
+          <li>Umsetzung der Hygienemaßnahmen</li>
+          <li>Reinigung, Desinfektion und Aufbereitung</li>
+          <li>Händehygiene und Materiallagerung</li>
+          <li>Dokumentation und vorhandene Pläne</li>
+        </ul>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Ein regelmäßiger Blick auf die bestehenden Abläufe
-        hilft dabei, Schwachstellen frühzeitig zu erkennen
-        und gezielt zu verbessern.
-
-        Im Rahmen von Hygienechecks überprüfe ich Ihre
-        bestehenden Strukturen und Abläufe und zeige Ihnen
-        verständlich auf, wo Optimierungsbedarf besteht.
-
-        Dabei können unter anderem folgende Bereiche
-        betrachtet werden:
-
-      </p>
-
-
-      <ul class="service-list">
-
-        <li>
-          Umsetzung der Hygienemaßnahmen
-        </li>
-
-        <li>
-          Reinigung und Desinfektion
-        </li>
-
-        <li>
-          Aufbereitung und hygienische Arbeitsabläufe
-        </li>
-
-        <li>
-          Händehygiene
-        </li>
-
-        <li>
-          Lagerung und Umgang mit Materialien
-        </li>
-
-        <li>
-          Dokumentation
-        </li>
-
-        <li>
-          vorhandene Hygienepläne und Arbeitsanweisungen
-        </li>
-
-      </ul>
-
-
-      <p style="text-align:justify">
-
-        Sie erhalten eine transparente Einschätzung
-        und konkrete Empfehlungen für die weitere Umsetzung.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- REINIGUNG / DESINFEKTION / QUALITÄT -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Reinigungs-, Desinfektions- &amp;
-        Qualitätsmanagement
-
+      <div class="card">
+        <h3>Reinigungs- &amp; Desinfektionsmanagement</h3>
+        <p>
+          Klare, nachvollziehbare Strukturen – von der Festlegung geeigneter Abläufe
+          über Pläne und Anweisungen bis zur regelmäßigen Überprüfung.
+        </p>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Professionelle Reinigung und Desinfektion sind
-        zentrale Bestandteile eines funktionierenden
-        Hygienemanagements.
-
-        Ich unterstütze Sie dabei, klare und nachvollziehbare
-        Strukturen zu schaffen – von der Festlegung geeigneter
-        Abläufe über die Erstellung von Plänen und Anweisungen
-        bis hin zur Dokumentation und regelmäßigen Überprüfung.
-
-        So entstehen standardisierte Prozesse, die Ihren
-        Mitarbeitenden Sicherheit geben und gleichzeitig
-        die Qualität Ihrer Einrichtung stärken.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- SCHULUNGEN -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Schulungen &amp; Unterweisungen
-
+      <div class="card">
+        <div class="tag">Schulen · Kindergärten</div>
+        <h3>Hygienekonzepte für Gemeinschaftseinrichtungen</h3>
+        <p>Hygienepläne und Hygienekonzepte, die zum Alltag mit Kindern und Jugendlichen passen:</p>
+        <ul>
+          <li>Hygieneplan für Schule, Kindergarten oder Kita</li>
+          <li>Reinigungs- und Desinfektionspläne</li>
+          <li>Vorgehen bei Infektionskrankheiten und Ausbrüchen</li>
+          <li>Einweisung von Personal und Reinigungskräften</li>
+        </ul>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Hygiene funktioniert nur dann zuverlässig,
-        wenn alle Beteiligten wissen, worauf es ankommt.
-
-        Deshalb biete ich praxisorientierte Schulungen
-        und Unterweisungen für Mitarbeitende an.
-
-        Die Inhalte werden auf die jeweiligen Anforderungen
-        Ihrer Einrichtung abgestimmt und verständlich vermittelt.
-
-        Mögliche Themen sind beispielsweise:
-
-      </p>
-
-
-      <ul class="service-list">
-
-        <li>
-          Grundlagen der Hygiene
-        </li>
-
-        <li>
-          Händehygiene
-        </li>
-
-        <li>
-          Reinigung und Desinfektion
-        </li>
-
-        <li>
-          hygienisches Arbeiten im Alltag
-        </li>
-
-        <li>
-          Vermeidung von Infektionsrisiken
-        </li>
-
-        <li>
-          interne Hygienevorgaben
-        </li>
-
-        <li>
-          praktische Umsetzung von Hygieneplänen
-          und Arbeitsanweisungen
-        </li>
-
-      </ul>
-
-
-      <p style="text-align:justify">
-
-        <strong>
-          Mein Anspruch:
-        </strong>
-
-        Wissen vermitteln, das im Arbeitsalltag
-        tatsächlich angewendet werden kann.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- HYGIENE PROFESSIONELL ORGANISIEREN -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Hygiene professionell organisieren –
-        nachhaltig verbessern
-
+      <div class="card">
+        <div class="tag">Tattoo · Kosmetik</div>
+        <h3>Hygienekonzepte für Tattoo- &amp; Kosmetikstudios</h3>
+        <p>Vollständige Hygieneunterlagen für Ihr Studio – erstellt oder überarbeitet:</p>
+        <ul>
+          <li>Hygienekonzept und Hygieneplan</li>
+          <li>Reinigungs- und Desinfektionspläne</li>
+          <li>Aufbereitung von Instrumenten und Arbeitsmaterial</li>
+          <li>Dokumentationsvorlagen für den Studioalltag</li>
+        </ul>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Ein funktionierendes Hygienemanagement besteht aus
-        vielen einzelnen Bausteinen. Entscheidend ist,
-        dass diese Bausteine sinnvoll ineinandergreifen.
-
-        Deshalb betrachte ich nicht nur einzelne Maßnahmen,
-        sondern Ihre bestehenden Prozesse als Ganzes.
-
-        Gemeinsam entwickeln wir Strukturen, die:
-
-      </p>
-
-
-      <ul class="service-list">
-
-        <li>
-          verständlich und praxistauglich sind
-        </li>
-
-        <li>
-          zu Ihren individuellen Arbeitsabläufen passen
-        </li>
-
-        <li>
-          eine sichere Umsetzung ermöglichen
-        </li>
-
-        <li>
-          nachvollziehbar dokumentiert werden können
-        </li>
-
-        <li>
-          langfristig in Ihrem Arbeitsalltag funktionieren
-        </li>
-
-      </ul>
-
-
-      <p style="text-align:justify">
-
-        Dabei lege ich großen Wert auf eine persönliche,
-        unkomplizierte und vertrauensvolle Zusammenarbeit.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- FÜR MEDIZINISCHE UND PFLEGERISCHE EINRICHTUNGEN -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Für medizinische &amp;
-        pflegerische Einrichtungen
-
+      <div class="card">
+        <h3>Neueröffnungen &amp; Umbauten</h3>
+        <p>
+          Hygienische Bewertung von Räumen, Abläufen und Ausstattung schon in der
+          Planungsphase, damit spätere Nachbesserungen gar nicht erst nötig werden.
+        </p>
       </div>
 
-
-      <p style="text-align:justify">
-
-        Mein Leistungsangebot richtet sich an medizinische
-        und pflegerische Einrichtungen, die ihr Hygiene-
-        und Qualitätsmanagement professionell aufstellen
-        oder bestehende Strukturen optimieren möchten.
-
-        Ob Sie Unterstützung bei der Erstellung eines
-        Hygienekonzeptes benötigen, Ihre bestehenden
-        Abläufe überprüfen lassen möchten, Mitarbeitende
-        schulen wollen oder eine umfassende Begleitung
-        im Hygienemanagement suchen – ich unterstütze Sie
-        individuell und lösungsorientiert.
-
-      </p>
-
     </div>
-
-
-
-    <!-- IHR VORTEIL -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Ihr Vorteil:
-        Hygiene, die im Alltag funktioniert
-
-      </div>
-
-
-      <p style="text-align:justify">
-
-        Vorschriften und Anforderungen sind wichtig.
-        Noch wichtiger ist jedoch, dass daraus klare
-        und praktikable Abläufe entstehen.
-
-        Ich unterstütze Sie dabei, Hygiene verständlich
-        zu machen, Prozesse zu optimieren und Ihre
-        Mitarbeitenden sicher in der Umsetzung zu begleiten.
-
-      </p>
-
-
-      <p class="highlight">
-
-        <strong>
-
-          Für mehr Sicherheit.<br>
-
-          Für mehr Qualität.<br>
-
-          Für einen professionellen Hygienestandard.
-
-        </strong>
-
-      </p>
-
-    </div>
-
-
-
-    <!-- ABSCHLUSS -->
-
-    <div class="service-block">
-
-      <div class="service-title">
-
-        Sie möchten Ihr Hygienemanagement überprüfen
-        oder neu aufstellen?
-
-      </div>
-
-
-      <p style="text-align:justify">
-
-        Gerne bespreche ich mit Ihnen, wo Ihre Einrichtung
-        aktuell steht und welche Unterstützung sinnvoll ist.
-
-      </p>
-
-
-      <p class="cta-text">
-
-        <strong>
-
-          Nehmen Sie Kontakt mit mir auf, gemeinsam finden
-          wir die passende Lösung für Ihre Einrichtung.
-
-        </strong>
-
-      </p>
-
-    </div>
-
 
   </div>
-
 </section>
 
+
+<!-- =========================================================
+     ÜBER MICH
+========================================================= -->
+<section class="section section-soft" id="ueber-mich">
+  <div class="wrap about">
+
+    <!-- Foto: Datei "portrait.jpg" ins Repository hochladen (ca. 800 px breit) -->
+    <img src="portrait.jpg" alt="Lisa Sambataro, Hygienekontrolleurin und Desinfektorin" onerror="this.style.display='none'">
+
+    <div>
+      <div class="eyebrow">Über mich</div>
+      <h2>Lisa Sambataro</h2>
+
+      <p>
+        Ich halte Schulungen und Seminare zu Hygienethemen und bin es gewohnt, Fachwissen für
+        unterschiedliche Zielgruppen verständlich aufzubereiten, praxisnah zu
+        vermitteln und Teilnehmende sicher durch ein Thema zu begleiten. Das kommt
+        besonders Hygieneeinweisungen für Mitarbeitende und der Einarbeitung von
+        Reinigungskräften zugute.
+      </p>
+
+      <p>
+        Ich plane vorausschauend, dokumentiere sorgfältig und behalte auch bei
+        mehreren Einrichtungen und Terminen den Überblick. Durch meine frühere Arbeit
+        im Gesundheitsamt kenne ich außerdem die baulichen Anforderungen. Bei
+        Neueröffnungen und Umbauten bewerte ich Räume, Abläufe und Ausstattung
+        deshalb von Anfang an hygienisch und berate die Verantwortlichen dazu.
+      </p>
+
+      <ul class="qualifications">
+        <li>Staatlich anerkannte Hygienekontrolleurin</li>
+        <li>Staatlich anerkannte Desinfektorin</li>
+        <li>Berufserfahrung im Gesundheitsamt, auch zu baulichen Anforderungen</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================================
+     ABLAUF
+========================================================= -->
+<section class="section">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Ablauf</div>
+      <h2>So einfach geht's</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Erstgespräch</h3>
+        <p>Wir besprechen kurz Ihre Einrichtung, Ihr Team und was Sie brauchen. Unverbindlich.</p>
+      </div>
+      <div class="step">
+        <h3>Angebot</h3>
+        <p>Sie erhalten ein klares Angebot mit Inhalten, Umfang und Preis – ohne versteckte Kosten.</p>
+      </div>
+      <div class="step">
+        <h3>Durchführung</h3>
+        <p>Seminar oder Beratung direkt bei Ihnen vor Ort, praxisnah und auf Ihre Abläufe bezogen.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 <!-- =========================================================
      KONTAKT
 ========================================================= -->
+<section class="section section-soft contact" id="kontakt">
+  <div class="wrap">
 
-<section
-  class="section"
-  id="contact"
->
+    <div class="section-head">
+      <div class="eyebrow">Kontakt</div>
+      <h2>Vereinbaren Sie ein unverbindliches Erstgespräch</h2>
+      <p>Schreiben Sie mir kurz, um welche Einrichtung und welches Thema es geht. Ich melde mich zeitnah bei Ihnen.</p>
+    </div>
 
-  <div
-    class="container content"
-  >
-
-
-    <h2>
-      Kontakt
-    </h2>
-    <p>
-      <strong>
-        Vereinbaren Sie gerne ein unverbindliches Erstgespräch.
-      </strong>
-
-      <br><br>
-
-
-      <strong>
-        Email:
-      </strong>
-
-      <a
-        class="contact-link"
-        href="mailto:hyg.sambataro@web.de"
-      >
-        hyg.sambataro@web.de
-      </a>
-
-      <br>
-
-
-      <strong>
-        Mobil:
-      </strong>
-
-      <a
-        class="contact-link"
-        href="tel:+491774159981"
-      >
-        0177 4159981
-      </a>
-
-      <br>
-
-
-      <strong>
-        Instagram:
-      </strong>
-
-      <a
-        class="contact-link"
-        href="https://www.instagram.com/hygiene.compliance"
-        target="_blank"
-        rel="noopener"
-      >
-        @hygiene.compliance
-      </a>
-
-    </p>
-
+    <div class="contact-list">
+      <div><span>E-Mail</span> <a class="contact-link" href="mailto:hyg.sambataro@web.de">hyg.sambataro@web.de</a></div>
+      <div><span>Mobil</span> <a class="contact-link" href="tel:+491774159981">0177 4159981</a></div>
+      <div><span>Instagram</span> <a class="contact-link" href="https://www.instagram.com/hygiene.compliance" target="_blank" rel="noopener">@hygiene.compliance</a></div>
+    </div>
 
   </div>
-
 </section>
 
+</main>
 
 
 <!-- =========================================================
      FOOTER
 ========================================================= -->
+<footer class="footer">
+  © 2026 hygiene.compliance · Lisa Sambataro ·
+  <a href="impressum.html">Impressum</a> ·
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
 
-<div class="footer">
-
-  © 2026 Alle Rechte vorbehalten |
-
-  <a href="impressum.html">
-    Impressum
-  </a>
-
-  |
-
-  <a href="datenschutz.html">
-    Datenschutz
-  </a>
-
-</div>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
 
 <script>
-
-/*
-   Navigation:
-   Der aktuell sichtbare Bereich
-   wird oben rechts markiert.
-*/
-
-const navLinks =
-  document.querySelectorAll('.nav a');
-
-const sectionElements =
-  document.querySelectorAll('section');
-
+/* Aktuellen Bereich in der Navigation markieren */
+const links = document.querySelectorAll('.nav a');
+const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
 
 function updateNav() {
-
-  let scrollPos =
-    window.scrollY + 150;
-
-
-  sectionElements.forEach(sec => {
-
-    const sectionTop =
-      sec.offsetTop;
-
-    const sectionHeight =
-      sec.offsetHeight;
-
-
-    if (
-      scrollPos >= sectionTop &&
-      scrollPos <
-      sectionTop + sectionHeight
-    ) {
-
-
-      navLinks.forEach(a => {
-
-        a.classList.remove('active');
-
-      });
-
-
-      const activeLink =
-        document.querySelector(
-          `.nav a[href="#${sec.id}"]`
-        );
-
-
-      if (activeLink) {
-
-        activeLink.classList.add('active');
-
-      }
-
-    }
-
-  });
-
+  const pos = window.scrollY + 150;
+  let current = null;
+  sections.forEach(sec => { if (sec && sec.offsetTop <= pos) current = sec.id; });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 }
 
-
-/*
-   Beim Laden immer oben starten.
-*/
-
-window.addEventListener(
-  'load',
-  () => {
-
-    setTimeout(
-      () => {
-
-        window.scrollTo(
-          0,
-          0
-        );
-
-      },
-      50
-    );
-
-
-    if (window.location.hash) {
-
-      history.replaceState(
-        null,
-        document.title,
-        window.location.pathname +
-        window.location.search
-      );
-
-    }
-
-
-    updateNav();
-
-  }
-);
-
-
-window.addEventListener(
-  'scroll',
-  updateNav
-);
-
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
 </script>
 
-
 </body>
-
 </html>
