@@ -1,349 +1,541 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hygiene.compliance | Hygieneschulungen, Fortbildungen &amp; Hygieneberatung</title>
+<meta name="description" content="Hygieneschulungen und Fortbildungen für Pflege, Medizin, Schulen, Kitas sowie Tattoo- und Kosmetikstudios – inhouse, bei Bildungsträgern oder online, mit Teilnahmebescheinigung. Dazu Hygienekonzepte, Hygienepläne und Hygieneberatung.">
+<meta property="og:title" content="hygiene.compliance | Hygieneschulungen &amp; Fortbildungen">
+<meta property="og:description" content="Praxisnahe Hygieneschulungen und Fortbildungen für Einrichtungen, Teams und Bildungsträger – mit Erfahrung aus dem Gesundheitsamt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.hygienecompliance.de/">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=cormorant-garamond:300,400,600|inter:200,300,400,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "ProfessionalService",
+"name": "hygiene.compliance – Lisa Sambataro",
+"url": "https://www.hygienecompliance.de/",
+"email": "hyg.sambataro@web.de",
+"telephone": "+491774159981",
+"description": "Hygieneschulungen, Hygienefortbildungen, Hygienekonzepte und Hygieneberatung für medizinische und pflegerische Einrichtungen, Gemeinschaftseinrichtungen wie Schulen und Kitas, Tattoo- und Kosmetikstudios sowie für Bildungsträger.",
+"knowsAbout": ["Basishygiene", "Händehygiene", "Flächenhygiene", "Multiresistente Erreger", "Ausbruchsmanagement", "Hygieneplan nach § 36 IfSG", "Hygiene in Tattoo- und Kosmetikstudios"],
+"sameAs": ["https://www.instagram.com/hygiene.compliance", "https://www.linkedin.com/in/lisa-sambataro-5930b838b/"]
+}
+</script>
+<style>
+:root{--bg:#f5efe6;--bg-soft:#efe7db;--text:#3e3e3e;--muted:#77716a;--line:#d9cfc1;}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300;font-size:17px;line-height:1.8;}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;line-height:1.25;margin:0 0 16px;}
+p{margin:0 0 16px;}
+strong{font-weight:500;}
+a{color:var(--text);}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px;}
+.nav{position:fixed;top:40px;right:40px;display:flex;flex-direction:column;align-items:flex-end;gap:12px;font-size:12px;letter-spacing:1px;z-index:100;}
+.nav a{text-decoration:none;color:var(--text);position:relative;transition:opacity .3s ease;}
+.nav a::after{content:"";position:absolute;right:0;bottom:-4px;width:0;height:1px;background:var(--text);transition:width .3s ease;}
+.nav a:hover::after,.nav a.active::after{width:100%;}
+.nav a.active{font-weight:500;}
+.hero{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:82vh;text-align:center;padding:40px 20px;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,48px);font-weight:300;letter-spacing:1px;margin-bottom:20px;text-shadow:1px 1px 4px rgba(0,0,0,0.1);white-space:nowrap;opacity:0;transform:translateY(-20px);animation:fadeIn 1s forwards .3s;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3.4vw,30px);font-weight:300;max-width:760px;margin:10px auto 0;opacity:0;transform:translateY(20px);animation:fadeIn 1s forwards .6s;}
+.hero-target{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:18px;opacity:0;animation:fadeIn 1s forwards .8s;}
+.hero-line{width:80px;height:2px;background:var(--text);margin:34px auto 40px;opacity:0;transform:scaleX(0);animation:lineIn .8s forwards .9s;}
+.hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeIn 1s forwards 1.1s;}
+.hero-person{display:flex;align-items:center;gap:16px;margin-top:48px;text-align:left;opacity:0;animation:fadeIn 1s forwards 1.3s;}
+.hero-person img{width:64px;height:64px;border-radius:50%;object-fit:cover;filter:grayscale(15%);flex:none;}
+.hero-person div{font-size:14px;line-height:1.5;color:var(--muted);}
+.hero-person strong{display:block;color:var(--text);font-size:15px;}
+@keyframes fadeIn{to{opacity:1;transform:translateY(0);}
+}
+@keyframes lineIn{to{opacity:1;transform:scaleX(1);}
+}
+.btn{display:inline-block;padding:12px 26px;font-size:13px;letter-spacing:1px;text-decoration:none;border:1px solid var(--text);transition:background .3s,color .3s;}
+.btn-dark{background:var(--text);color:var(--bg);}
+.btn-dark:hover{background:transparent;color:var(--text);}
+.btn-light{background:transparent;color:var(--text);}
+.btn-light:hover{background:var(--text);color:var(--bg);}
+.center{text-align:center;margin-top:50px;}
+.section{padding:110px 0;scroll-margin-top:20px;}
+.section-soft{background:var(--bg-soft);}
+.section-head{text-align:center;max-width:680px;margin:0 auto 56px;}
+.section-head h2{font-size:clamp(28px,4vw,36px);font-weight:600;}
+.section-head h2::after{content:"";display:block;width:50px;height:1px;background:var(--text);margin:20px auto 0;}
+.section-head p{color:var(--muted);margin-top:20px;}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+.card{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;transition:background .3s;}
+.card:hover{background:rgba(255,255,255,0.35);}
+.card .tag{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.card h3{font-size:25px;font-weight:600;margin-bottom:12px;}
+.card p{font-size:16px;color:var(--muted);flex-grow:1;}
+.card ul{margin:0;padding-left:18px;font-size:16px;color:var(--muted);}
+.card li{margin-bottom:4px;}
+.card .meta{font-size:13px;letter-spacing:.3px;color:var(--text);border-top:1px solid var(--line);padding-top:12px;margin:4px 0 14px;}
+.card-link{align-self:flex-start;font-size:13px;letter-spacing:.5px;text-decoration:none;margin-top:8px;padding-bottom:2px;border-bottom:1px solid var(--text);transition:opacity .3s;}
+.card-link:hover{opacity:.6;}
+.card-dark{background:var(--text);color:var(--bg);}
+.card-dark:hover{background:#333;}
+.card-dark p,.card-dark .tag{color:#cfc7bc;}
+.card-dark .meta{color:var(--bg);border-color:#5a5a5a;}
+.card-dark .card-link{color:var(--bg);border-color:var(--bg);}
+.card-dark ul{color:#cfc7bc;margin-bottom:16px;}
+.card-wide{grid-column:1 / -1;}
+.audience{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;}
+.audience div{padding:34px 20px;font-size:15px;color:var(--muted);}
+.audience div + div{border-left:1px solid var(--line);}
+.audience strong{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:8px;}
+.conditions{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;margin-top:50px;text-align:center;}
+.conditions div{font-size:15px;color:var(--muted);}
+.conditions strong{display:block;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text);margin-bottom:4px;}
+.about{display:flex;gap:60px;align-items:flex-start;}
+.about>div{flex:1;}
+.about img{flex:0 0 300px;width:300px;aspect-ratio:4 / 5;object-fit:cover;filter:grayscale(15%);}
+.about h2{font-size:clamp(28px,4vw,36px);font-weight:600;}
+.motto{font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.5;margin-top:26px;}
+.qualifications{list-style:none;padding:0;margin:24px 0;border-top:1px solid var(--line);}
+.qualifications li{padding:10px 0;border-bottom:1px solid var(--line);font-size:16px;}
+.note{font-size:14px;color:var(--muted);font-style:italic;}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;}
+.quotes blockquote{margin:0;font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.5;}
+.quotes cite{display:block;margin-top:12px;font-family:'Inter',sans-serif;font-style:normal;font-size:13px;color:var(--muted);}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:40px;text-align:center;counter-reset:step;}
+.step::before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin:0 auto 18px;border:1px solid var(--text);border-radius:50%;font-family:'Cormorant Garamond',serif;font-size:22px;}
+.step h3{font-size:24px;font-weight:600;margin-bottom:8px;}
+.step p{color:var(--muted);font-size:16px;margin:0;}
+.contact{text-align:center;}
+.contact-list{font-size:18px;line-height:2.2;}
+.contact-list span{display:inline-block;min-width:90px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+.contact-link{text-decoration:none;border-bottom:1px solid transparent;transition:border-color .3s;}
+.contact-link:hover{border-bottom-color:var(--text);}
+.footer{padding:40px 0;font-size:14px;opacity:.6;text-align:center;}
+.footer a{text-decoration:none;}
+@media (max-width:900px){.nav{position:sticky;top:0;left:0;right:0;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px 22px;padding:14px 10px;background:var(--bg);border-bottom:1px solid var(--line);font-size:11px;}
+.nav a::after{left:0;right:auto;}
+.hero{min-height:85vh;padding:40px 20px;}
+.hero-title{white-space:normal;}
+.section{padding:80px 0;scroll-margin-top:60px;}
+.grid{grid-template-columns:1fr;}
+.audience{grid-template-columns:1fr 1fr;}
+.audience div + div{border-left:none;}
+.audience div:nth-child(even){border-left:1px solid var(--line);}
+.audience div:nth-child(n+3){border-top:1px solid var(--line);}
+.about{flex-direction:column;gap:34px;}
+.about img{flex:none;width:100%;max-width:280px;}
+.wrap{padding:0 22px;}
+}
+</style>
+</head>
 <body>
-
 <nav class="nav">
-  <a href="#schulungen">Schulungen</a>
-  <a href="#bildungstraeger">Für Bildungsträger</a>
-  <a href="#beratung">Hygieneberatung</a>
-  <a href="#ueber-mich">Über mich</a>
-  <a href="#kontakt">Kontakt</a>
+<a href="#schulungen">Schulungen</a>
+<a href="#bildungstraeger">Für Bildungsträger</a>
+<a href="#beratung">Hygieneberatung</a>
+<a href="#ueber-mich">Über mich</a>
+<a href="#kontakt">Kontakt</a>
 </nav>
-
 <header class="hero">
-  <h1 class="hero-title">HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
-  <div class="hero-sub">
-    Hygieneschulungen und Fortbildungen<br>
-    praxisnah – mit Erfahrung aus dem Gesundheitsamt
-  </div>
-  <div class="hero-target">Für Einrichtungen, Teams und Bildungsträger</div>
-  <div class="hero-line"></div>
-  <div class="hero-buttons">
-    <a class="btn btn-dark" href="#schulungen">SCHULUNGEN ANSEHEN</a>
-    <a class="btn btn-light" href="#kontakt">ANFRAGE STELLEN</a>
-  </div>
-  <div class="hero-person">
-    <img src="portrait.jpg" alt="Lisa Sambataro" onerror="this.style.display='none'">
-    <div>
-      <strong>Lisa Sambataro</strong>
-      Staatlich anerkannte Hygienekontrolleurin und Desinfektorin
-    </div>
-  </div>
+<h1 class="hero-title">HYGIENE&nbsp;•&nbsp;COMPLIANCE</h1>
+<div class="hero-sub">
+Hygieneschulungen und Fortbildungen<br>
+praxisnah – mit Erfahrung aus dem Gesundheitsamt
+</div>
+<div class="hero-target">Für Einrichtungen, Teams und Bildungsträger</div>
+<div class="hero-line"></div>
+<div class="hero-buttons">
+<a class="btn btn-dark" href="#schulungen">SCHULUNGEN ANSEHEN</a>
+<a class="btn btn-light" href="#kontakt">ANFRAGE STELLEN</a>
+</div>
+<div class="hero-person">
+<img src="portrait.jpg" alt="Lisa Sambataro" onerror="this.style.display='none'">
+<div>
+<strong>Lisa Sambataro</strong>
+Staatlich anerkannte Hygienekontrolleurin und Desinfektorin
+</div>
+</div>
 </header>
-
 <main>
-
 <section class="section" style="padding-top: 0;">
-  <div class="wrap">
-    <div class="audience">
-      <div><strong>Pflege</strong>Pflegeheime, ambulante Dienste, Tagespflege</div>
-      <div><strong>Medizinische Einrichtungen</strong>Arztpraxen und vergleichbare Einrichtungen</div>
-      <div><strong>Gemeinschafts&shy;einrichtungen</strong>Schulen, Kindergärten und Kitas</div>
-      <div><strong>Tattoo &amp; Kosmetik</strong>Tattoo- und Kosmetikstudios</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="audience">
+<div><strong>Pflege</strong>Pflegeheime, ambulante Dienste, Tagespflege</div>
+<div><strong>Medizinische Einrichtungen</strong>Arztpraxen und vergleichbare Einrichtungen</div>
+<div><strong>Gemeinschafts&shy;einrichtungen</strong>Schulen, Kindergärten und Kitas</div>
+<div><strong>Tattoo &amp; Kosmetik</strong>Tattoo- und Kosmetikstudios</div>
+</div>
+</div>
 </section>
-
 <section class="section section-soft" id="schulungen">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Schulungen &amp; Fortbildungen</div>
-      <h2>Hygieneschulungen, die im Alltag ankommen</h2>
-      <p>Für Pflege, medizinische Einrichtungen, Schulen, Kitas sowie Tattoo- und Kosmetikstudios. Jede Schulung ist als Kurzformat oder Tagesseminar buchbar und wird auf Wissensstand, Abläufe und Fragen der Teilnehmenden abgestimmt – mit Teilnahmebescheinigung.</p>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="tag">Grundlagen</div>
-        <h3>Basishygiene</h3>
-        <p>Die Grundlagen hygienischen Arbeitens: Übertragungswege, Standardhygienemaßnahmen, persönliche Hygiene und Schutzausrüstung. Ideal für neue Mitarbeitende.</p>
-        <div class="meta">Präsenz · Kurzformat oder Tagesseminar · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Basishygiene">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Grundlagen</div>
-        <h3>Händehygiene</h3>
-        <p>Händedesinfektion richtig durchführen, die passenden Momente erkennen, Hautschutz und typische Fehler im Alltag – anschaulich und praxisnah.</p>
-        <div class="meta">Präsenz mit praktischen Übungen · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20H%C3%A4ndehygiene">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Reinigung &amp; Desinfektion</div>
-        <h3>Flächenhygiene</h3>
-        <p>Reinigung oder Desinfektion? Auswahl und richtige Anwendung von Mitteln, Einwirkzeiten, Abläufe und Dokumentation.</p>
-        <div class="meta">Präsenz · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Fl%C3%A4chenhygiene">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Fachthema</div>
-        <h3>Multiresistente Erreger</h3>
-        <p>Was hinter MRSA, VRE und MRGN steckt, wie sie übertragen werden und welche Maßnahmen im Alltag wirklich nötig sind – ohne Verunsicherung im Team.</p>
-        <div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Multiresistente%20Erreger">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Fachthema</div>
-        <h3>Ausbruchsmanagement in Gemeinschaftseinrichtungen</h3>
-        <p>Magen-Darm, Grippe, Läuse: Was bei gehäuften Erkrankungen zu tun ist, welche Meldepflichten gelten und wie Leitung, Team und Eltern gut informiert durch die Situation kommen.</p>
-        <div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Ausbruchsmanagement">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Organisation</div>
-        <h3>Hygiene in Einrichtungen</h3>
-        <p>Hygienemanagement im Überblick: Hygieneplan, Zuständigkeiten, Abläufe und Dokumentation – abgestimmt auf Ihre Einrichtung.</p>
-        <div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygiene%20in%20Einrichtungen">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Tattoo · Kosmetik</div>
-        <h3>Hygieneschulung für Tattoo- &amp; Kosmetikstudios</h3>
-        <p>Hygiene bei körpernahen Dienstleistungen: Arbeitsplatz, Aufbereitung von Instrumenten, Haut- und Händedesinfektion und was bei einer Begehung durch das Gesundheitsamt wichtig ist.</p>
-        <div class="meta">Präsenz · ca. 2 Stunden oder Tagesseminar · mit Teilnahmezertifikat</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygieneschulung%20f%C3%BCr%20Studios">Schulung anfragen</a>
-      </div>
-      <div class="card">
-        <div class="tag">Auffrischung</div>
-        <h3>Hygiene-Refresher</h3>
-        <p>Kompakte Auffrischung für Teams mit Vorwissen: Wissen festigen, Routinen überprüfen und Fragen aus dem Arbeitsalltag klären.</p>
-        <div class="meta">Präsenz oder online · Kurzformat · mit Teilnahmebescheinigung</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygiene-Refresher">Schulung anfragen</a>
-      </div>
-      <div class="card card-dark card-wide">
-        <div class="tag">Nach Maß</div>
-        <h3>Individuelle Hygieneschulung</h3>
-        <p>Sie haben ein eigenes Thema oder einen konkreten Anlass? Inhalt, Umfang und Schwerpunkte stimmen wir gemeinsam ab.</p>
-        <div class="meta">Format und Umfang nach Absprache</div>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Individuelle%20Hygieneschulung">Individuelle Schulung anfragen</a>
-      </div>
-    </div>
-    <div class="conditions">
-      <div><strong>Format</strong>Kurzformat, Tagesseminar oder Reihe</div>
-      <div><strong>Ort</strong>Inhouse, bei Veranstaltern oder online</div>
-      <div><strong>Nachweis</strong>Teilnahmebescheinigung für alle Teilnehmenden</div>
-      <div><strong>Preis</strong>Nach Aufwand, transparent und vorab abgesprochen</div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Schulungen &amp; Fortbildungen</div>
+<h2>Hygieneschulungen, die im Alltag ankommen</h2>
+<p>
+Für Pflege, medizinische Einrichtungen, Schulen, Kitas sowie Tattoo- und
+Kosmetikstudios. Jede Schulung
+ist als Kurzformat oder Tagesseminar buchbar und wird auf Wissensstand, Abläufe
+und Fragen der Teilnehmenden abgestimmt – mit Teilnahmebescheinigung.
+</p>
+</div>
+<div class="grid">
+<div class="card">
+<div class="tag">Grundlagen</div>
+<h3>Basishygiene</h3>
+<p>
+Die Grundlagen hygienischen Arbeitens: Übertragungswege,
+Standardhygienemaßnahmen, persönliche Hygiene und Schutzausrüstung.
+Ideal für neue Mitarbeitende.
+</p>
+<div class="meta">Präsenz · Kurzformat oder Tagesseminar · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Basishygiene">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Grundlagen</div>
+<h3>Händehygiene</h3>
+<p>
+Händedesinfektion richtig durchführen, die passenden Momente erkennen,
+Hautschutz und typische Fehler im Alltag – anschaulich und praxisnah.
+</p>
+<div class="meta">Präsenz mit praktischen Übungen · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20H%C3%A4ndehygiene">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Reinigung &amp; Desinfektion</div>
+<h3>Flächenhygiene</h3>
+<p>
+Reinigung oder Desinfektion? Auswahl und richtige Anwendung von Mitteln,
+Einwirkzeiten, Abläufe und Dokumentation.
+</p>
+<div class="meta">Präsenz · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Fl%C3%A4chenhygiene">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Fachthema</div>
+<h3>Multiresistente Erreger</h3>
+<p>
+Was hinter MRSA, VRE und MRGN steckt, wie sie übertragen werden und welche
+Maßnahmen im Alltag wirklich nötig sind – ohne Verunsicherung im Team.
+</p>
+<div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Multiresistente%20Erreger">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Fachthema</div>
+<h3>Ausbruchsmanagement in Gemeinschaftseinrichtungen</h3>
+<p>
+Magen-Darm, Grippe, Läuse: Was bei gehäuften Erkrankungen zu tun ist,
+welche Meldepflichten gelten und wie Leitung, Team und Eltern gut
+informiert durch die Situation kommen.
+</p>
+<div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Ausbruchsmanagement">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Organisation</div>
+<h3>Hygiene in Einrichtungen</h3>
+<p>
+Hygienemanagement im Überblick: Hygieneplan, Zuständigkeiten,
+Abläufe und Dokumentation – abgestimmt auf Ihre Einrichtung.
+</p>
+<div class="meta">Präsenz oder online · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygiene%20in%20Einrichtungen">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Tattoo · Kosmetik</div>
+<h3>Hygieneschulung für Tattoo- &amp; Kosmetikstudios</h3>
+<p>
+Hygiene bei körpernahen Dienstleistungen: Arbeitsplatz, Aufbereitung von
+Instrumenten, Haut- und Händedesinfektion und was bei einer Begehung
+durch das Gesundheitsamt wichtig ist.
+</p>
+<div class="meta">Präsenz · ca. 2 Stunden oder Tagesseminar · mit Teilnahmezertifikat</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygieneschulung%20f%C3%BCr%20Studios">Schulung anfragen</a>
+</div>
+<div class="card">
+<div class="tag">Auffrischung</div>
+<h3>Hygiene-Refresher</h3>
+<p>
+Kompakte Auffrischung für Teams mit Vorwissen: Wissen festigen,
+Routinen überprüfen und Fragen aus dem Arbeitsalltag klären.
+</p>
+<div class="meta">Präsenz oder online · Kurzformat · mit Teilnahmebescheinigung</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Schulungsanfrage%3A%20Hygiene-Refresher">Schulung anfragen</a>
+</div>
+<div class="card card-dark card-wide">
+<div class="tag">Nach Maß</div>
+<h3>Individuelle Hygieneschulung</h3>
+<p>
+Sie haben ein eigenes Thema oder einen konkreten Anlass? Inhalt, Umfang
+und Schwerpunkte stimmen wir gemeinsam ab.
+</p>
+<div class="meta">Format und Umfang nach Absprache</div>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Individuelle%20Hygieneschulung">Individuelle Schulung anfragen</a>
+</div>
+</div>
+<div class="conditions">
+<div><strong>Format</strong>Kurzformat, Tagesseminar oder Reihe</div>
+<div><strong>Ort</strong>Inhouse, bei Veranstaltern oder online</div>
+<div><strong>Nachweis</strong>Teilnahmebescheinigung für alle Teilnehmenden</div>
+<div><strong>Preis</strong>Nach Aufwand, transparent und vorab abgesprochen</div>
+</div>
+</div>
 </section>
-
 <section class="section" id="bildungstraeger">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Für Bildungsträger &amp; Veranstalter</div>
-      <h2>Hygienethemen für Ihr Fortbildungsprogramm</h2>
-      <p>Sie planen Fortbildungen für Fachkräfte aus Pflege, Kita, Praxis oder für Tattoo- und Kosmetikstudios? Ich bringe ausgearbeitete Kurskonzepte mit und passe sie an Ihr Format und Ihre Zielgruppe an.</p>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <h3>Ausgearbeitete Kurskonzepte</h3>
-        <p>Zu jedem Thema liegen Lernziele, Ablauf und ein Ausschreibungstext vor, den Sie direkt für Ihr Programm verwenden können.</p>
-      </div>
-      <div class="card">
-        <h3>Flexible Formate</h3>
-        <p>Präsenz oder online, als Einzeltermin, Abendveranstaltung oder Reihe. Der Umfang richtet sich nach Ihren Unterrichtseinheiten.</p>
-      </div>
-      <div class="card">
-        <h3>Wissen aus der Praxis</h3>
-        <p>Erfahrung aus dem Gesundheitsamt: Ich weiß, worauf es bei Begehungen ankommt und wo Einrichtungen im Alltag tatsächlich Unterstützung brauchen.</p>
-      </div>
-      <div class="card">
-        <h3>Alles aus einer Hand</h3>
-        <p>Handouts für die Teilnehmenden, Teilnahmebescheinigungen und eine unkomplizierte Abstimmung im Vorfeld.</p>
-      </div>
-    </div>
-    <div class="center">
-      <a class="btn btn-dark" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Dozentenprofil%20und%20Kurskonzepte">DOZENTENPROFIL ANFORDERN</a>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Für Bildungsträger &amp; Veranstalter</div>
+<h2>Hygienethemen für Ihr Fortbildungsprogramm</h2>
+<p>
+Sie planen Fortbildungen für Fachkräfte aus Pflege, Kita, Praxis oder für
+Tattoo- und Kosmetikstudios? Ich bringe ausgearbeitete Kurskonzepte mit und passe sie an Ihr
+Format und Ihre Zielgruppe an.
+</p>
+</div>
+<div class="grid">
+<div class="card">
+<h3>Ausgearbeitete Kurskonzepte</h3>
+<p>
+Zu jedem Thema liegen Lernziele, Ablauf und ein Ausschreibungstext vor,
+den Sie direkt für Ihr Programm verwenden können.
+</p>
+</div>
+<div class="card">
+<h3>Flexible Formate</h3>
+<p>
+Präsenz oder online, als Einzeltermin, Abendveranstaltung oder Reihe.
+Der Umfang richtet sich nach Ihren Unterrichtseinheiten.
+</p>
+</div>
+<div class="card">
+<h3>Wissen aus der Praxis</h3>
+<p>
+Erfahrung aus dem Gesundheitsamt: Ich weiß, worauf es bei Begehungen
+ankommt und wo Einrichtungen im Alltag tatsächlich Unterstützung brauchen.
+</p>
+</div>
+<div class="card">
+<h3>Alles aus einer Hand</h3>
+<p>
+Handouts für die Teilnehmenden, Teilnahmebescheinigungen und eine
+unkomplizierte Abstimmung im Vorfeld.
+</p>
+</div>
+</div>
+<div class="center">
+<a class="btn btn-dark" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Dozentenprofil%20und%20Kurskonzepte">DOZENTENPROFIL ANFORDERN</a>
+</div>
+</div>
 </section>
-
-<!-- AKTUELLE KURSE – ausgeblendet. Zum Anzeigen das Wort "hidden" löschen. -->
 <section class="section section-soft" id="termine" hidden>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Termine</div>
-      <h2>Aktuelle Kurse</h2>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="tag">Datum · Ort oder online</div>
-        <h3>Kurstitel</h3>
-        <p>Veranstalter und kurze Beschreibung.</p>
-        <a class="card-link" href="#" target="_blank" rel="noopener">Zur Anmeldung</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Termine</div>
+<h2>Aktuelle Kurse</h2>
+</div>
+<div class="grid">
+<div class="card">
+<div class="tag">Datum · Ort oder online</div>
+<h3>Kurstitel</h3>
+<p>Veranstalter und kurze Beschreibung.</p>
+<a class="card-link" href="#" target="_blank" rel="noopener">Zur Anmeldung</a>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-soft" id="beratung">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Hygieneberatung</div>
-      <h2>Unterstützung über die Schulung hinaus</h2>
-      <p>Wenn Sie Ihr Hygienemanagement neu aufstellen, bestehende Abläufe überprüfen oder die Hygieneorganisation ganz abgeben möchten, unterstütze ich Sie direkt in der Umsetzung.</p>
-    </div>
-    <div class="grid">
-      <div class="card card-dark card-wide">
-        <div class="tag">Zum Auslagern</div>
-        <h3>Externes Hygiene- &amp; Praxismanagement</h3>
-        <p>Die Hygieneaufgaben, die intern liegen bleiben, organisiere ich für Sie – regelmäßig oder nach Bedarf. Damit ist das Thema aus Ihrer Hand und trotzdem immer auf dem aktuellen Stand:</p>
-        <ul>
-          <li>Hygienepläne aktuell halten und Änderungen einarbeiten</li>
-          <li>Fristen im Blick: Unterweisungen, Schulungen und wiederkehrende Prüfungen</li>
-          <li>Dokumentation und Nachweise führen</li>
-          <li>Begehungen durch das Gesundheitsamt vorbereiten und begleiten</li>
-          <li>Feste Ansprechpartnerin für Leitung und Team bei Hygienefragen</li>
-        </ul>
-        <a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Externes%20Hygiene-%20und%20Praxismanagement">Unverbindlich anfragen</a>
-      </div>
-      <div class="card">
-        <h3>Hygienekonzepte &amp; -pläne</h3>
-        <p>Erstellung und Überarbeitung von Unterlagen, die zu Ihren tatsächlichen Abläufen passen:</p>
-        <ul>
-          <li>Hygienekonzepte und Hygienepläne</li>
-          <li>Reinigungs- und Desinfektionspläne</li>
-          <li>Arbeits- und Verfahrensanweisungen</li>
-          <li>Dokumentationsunterlagen</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Hygienechecks</h3>
-        <p>Ein strukturierter Blick auf Ihre Abläufe vor Ort, mit klaren Empfehlungen:</p>
-        <ul>
-          <li>Umsetzung der Hygienemaßnahmen</li>
-          <li>Reinigung, Desinfektion und Aufbereitung</li>
-          <li>Händehygiene und Materiallagerung</li>
-          <li>Dokumentation und vorhandene Pläne</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Reinigungs- &amp; Desinfektionsmanagement</h3>
-        <p>Klare, nachvollziehbare Strukturen – von der Festlegung geeigneter Abläufe über Pläne und Anweisungen bis zur regelmäßigen Überprüfung.</p>
-      </div>
-      <div class="card">
-        <div class="tag">Schulen · Kindergärten</div>
-        <h3>Hygienekonzepte für Gemeinschaftseinrichtungen</h3>
-        <p>Hygienepläne und Hygienekonzepte, die zum Alltag mit Kindern und Jugendlichen passen:</p>
-        <ul>
-          <li>Hygieneplan für Schule, Kindergarten oder Kita</li>
-          <li>Reinigungs- und Desinfektionspläne</li>
-          <li>Vorgehen bei Infektionskrankheiten und Ausbrüchen</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="tag">Tattoo · Kosmetik</div>
-        <h3>Hygienekonzepte für Tattoo- &amp; Kosmetikstudios</h3>
-        <p>Vollständige Hygieneunterlagen für Ihr Studio – erstellt oder überarbeitet:</p>
-        <ul>
-          <li>Hygienekonzept und Hygieneplan</li>
-          <li>Reinigungs- und Desinfektionspläne</li>
-          <li>Aufbereitung von Instrumenten und Arbeitsmaterial</li>
-          <li>Dokumentationsvorlagen für den Studioalltag</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Neueröffnungen &amp; Umbauten</h3>
-        <p>Hygienische Bewertung von Räumen, Abläufen und Ausstattung schon in der Planungsphase, damit spätere Nachbesserungen gar nicht erst nötig werden.</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Hygieneberatung</div>
+<h2>Unterstützung über die Schulung hinaus</h2>
+<p>
+Wenn Sie Ihr Hygienemanagement neu aufstellen, bestehende Abläufe überprüfen
+oder die Hygieneorganisation ganz abgeben möchten, unterstütze ich Sie direkt
+in der Umsetzung.
+</p>
+</div>
+<div class="grid">
+<div class="card card-dark card-wide">
+<div class="tag">Zum Auslagern</div>
+<h3>Externes Hygiene- &amp; Praxismanagement</h3>
+<p>
+Die Hygieneaufgaben, die intern liegen bleiben, organisiere ich für Sie –
+regelmäßig oder nach Bedarf. Damit ist das Thema aus Ihrer Hand und trotzdem
+immer auf dem aktuellen Stand:
+</p>
+<ul>
+<li>Hygienepläne aktuell halten und Änderungen einarbeiten</li>
+<li>Fristen im Blick: Unterweisungen, Schulungen und wiederkehrende Prüfungen</li>
+<li>Dokumentation und Nachweise führen</li>
+<li>Begehungen durch das Gesundheitsamt vorbereiten und begleiten</li>
+<li>Feste Ansprechpartnerin für Leitung und Team bei Hygienefragen</li>
+</ul>
+<a class="card-link" href="mailto:hyg.sambataro@web.de?subject=Anfrage%3A%20Externes%20Hygiene-%20und%20Praxismanagement">Unverbindlich anfragen</a>
+</div>
+<div class="card">
+<h3>Hygienekonzepte &amp; -pläne</h3>
+<p>Erstellung und Überarbeitung von Unterlagen, die zu Ihren tatsächlichen Abläufen passen:</p>
+<ul>
+<li>Hygienekonzepte und Hygienepläne</li>
+<li>Reinigungs- und Desinfektionspläne</li>
+<li>Arbeits- und Verfahrensanweisungen</li>
+<li>Dokumentationsunterlagen</li>
+</ul>
+</div>
+<div class="card">
+<h3>Hygienechecks</h3>
+<p>Ein strukturierter Blick auf Ihre Abläufe vor Ort, mit klaren Empfehlungen:</p>
+<ul>
+<li>Umsetzung der Hygienemaßnahmen</li>
+<li>Reinigung, Desinfektion und Aufbereitung</li>
+<li>Händehygiene und Materiallagerung</li>
+<li>Dokumentation und vorhandene Pläne</li>
+</ul>
+</div>
+<div class="card">
+<h3>Reinigungs- &amp; Desinfektionsmanagement</h3>
+<p>
+Klare, nachvollziehbare Strukturen – von der Festlegung geeigneter Abläufe
+über Pläne und Anweisungen bis zur regelmäßigen Überprüfung.
+</p>
+</div>
+<div class="card">
+<div class="tag">Schulen · Kindergärten</div>
+<h3>Hygienekonzepte für Gemeinschaftseinrichtungen</h3>
+<p>Hygienepläne und Hygienekonzepte, die zum Alltag mit Kindern und Jugendlichen passen:</p>
+<ul>
+<li>Hygieneplan für Schule, Kindergarten oder Kita</li>
+<li>Reinigungs- und Desinfektionspläne</li>
+<li>Vorgehen bei Infektionskrankheiten und Ausbrüchen</li>
+</ul>
+</div>
+<div class="card">
+<div class="tag">Tattoo · Kosmetik</div>
+<h3>Hygienekonzepte für Tattoo- &amp; Kosmetikstudios</h3>
+<p>Vollständige Hygieneunterlagen für Ihr Studio – erstellt oder überarbeitet:</p>
+<ul>
+<li>Hygienekonzept und Hygieneplan</li>
+<li>Reinigungs- und Desinfektionspläne</li>
+<li>Aufbereitung von Instrumenten und Arbeitsmaterial</li>
+<li>Dokumentationsvorlagen für den Studioalltag</li>
+</ul>
+</div>
+<div class="card">
+<h3>Neueröffnungen &amp; Umbauten</h3>
+<p>
+Hygienische Bewertung von Räumen, Abläufen und Ausstattung schon in der
+Planungsphase, damit spätere Nachbesserungen gar nicht erst nötig werden.
+</p>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section" id="ueber-mich">
-  <div class="wrap about">
-    <img src="portrait.jpg" alt="Lisa Sambataro, Hygienekontrolleurin und Desinfektorin" onerror="this.style.display='none'">
-    <div>
-      <div class="eyebrow">Über mich</div>
-      <h2>Lisa Sambataro</h2>
-      <p>Hygiene muss nicht kompliziert sein. Sie muss verständlich sein und in den Alltag passen. Genau das ist mein Anspruch, wenn ich Schulungen halte oder Einrichtungen berate: Wissen so vermitteln, dass es am nächsten Tag tatsächlich angewendet wird.</p>
-      <p>Als staatlich anerkannte Hygienekontrolleurin und Desinfektorin habe ich im Gesundheitsamt gearbeitet. Ich habe Einrichtungen begleitet, Ausbrüche mit betreut und kenne die Anforderungen aus erster Hand, auch bei baulichen Fragen. Diese Erfahrung fließt in jede Schulung ein: mit Beispielen aus dem echten Alltag statt Theorie aus dem Lehrbuch.</p>
-      <p class="motto">Sie sind Expertin oder Experte für Ihr Fachgebiet.<br>Ich bin die Expertin für Hygiene.</p>
-      <ul class="qualifications">
-        <li>Staatlich anerkannte Hygienekontrolleurin</li>
-        <li>Desinfektorin</li>
-        <li>Berufserfahrung im Gesundheitsamt, u. a. Ausbruchsmanagement und bauliche Anforderungen</li>
-        <li>Medizinische Fachangestellte mit Weiterbildung Praxisorganisation</li>
-      </ul>
-    </div>
-  </div>
+<div class="wrap about">
+<img src="portrait.jpg" alt="Lisa Sambataro, Hygienekontrolleurin und Desinfektorin" onerror="this.style.display='none'">
+<div>
+<div class="eyebrow">Über mich</div>
+<h2>Lisa Sambataro</h2>
+<p>
+Hygiene muss nicht kompliziert sein. Sie muss verständlich sein und in den
+Alltag passen. Genau das ist mein Anspruch, wenn ich Schulungen halte oder
+Einrichtungen berate: Wissen so vermitteln, dass es am nächsten Tag
+tatsächlich angewendet wird.
+</p>
+<p>
+Als staatlich anerkannte Hygienekontrolleurin und Desinfektorin habe ich im
+Gesundheitsamt gearbeitet. Ich habe Einrichtungen begleitet, Ausbrüche mit
+betreut und kenne die Anforderungen aus erster Hand, auch bei baulichen Fragen.
+Diese Erfahrung fließt in jede Schulung ein: mit Beispielen aus dem echten
+Alltag statt Theorie aus dem Lehrbuch.
+</p>
+<p class="motto">
+Sie sind Expertin oder Experte für Ihr Fachgebiet.<br>
+Ich bin die Expertin für Hygiene.
+</p>
+<ul class="qualifications">
+<li>Staatlich anerkannte Hygienekontrolleurin</li>
+<li>Desinfektorin</li>
+<li>Berufserfahrung im Gesundheitsamt, u. a. Ausbruchsmanagement und bauliche Anforderungen</li>
+<li>Medizinische Fachangestellte mit Weiterbildung Praxisorganisation</li>
+</ul>
+</div>
+</div>
 </section>
-
-<!-- STIMMEN – ausgeblendet. Zum Anzeigen das Wort "hidden" löschen und Texte eintragen. -->
 <section class="section section-soft" id="stimmen" hidden>
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Rückmeldungen</div>
-      <h2>Das sagen Teilnehmende</h2>
-    </div>
-    <div class="quotes">
-      <div>
-        <blockquote>„Zitat der Teilnehmerin oder des Teilnehmers.“</blockquote>
-        <cite>Name, Funktion, Einrichtung</cite>
-      </div>
-      <div>
-        <blockquote>„Zweites Zitat.“</blockquote>
-        <cite>Name, Funktion, Einrichtung</cite>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Rückmeldungen</div>
+<h2>Das sagen Teilnehmende</h2>
+</div>
+<div class="quotes">
+<div>
+<blockquote>„Zitat der Teilnehmerin oder des Teilnehmers.“</blockquote>
+<cite>Name, Funktion, Einrichtung</cite>
+</div>
+<div>
+<blockquote>„Zweites Zitat.“</blockquote>
+<cite>Name, Funktion, Einrichtung</cite>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-soft">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Ablauf</div>
-      <h2>So einfach geht's</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <h3>Erstgespräch</h3>
-        <p>Wir besprechen kurz Ihre Einrichtung oder Ihr Programm, die Zielgruppe und was Sie brauchen. Unverbindlich.</p>
-      </div>
-      <div class="step">
-        <h3>Angebot</h3>
-        <p>Sie erhalten ein klares Angebot mit Inhalten, Umfang und Preis – ohne versteckte Kosten.</p>
-      </div>
-      <div class="step">
-        <h3>Durchführung</h3>
-        <p>Schulung oder Beratung vor Ort, bei Ihnen als Veranstalter oder online – praxisnah und mit Bescheinigung.</p>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Ablauf</div>
+<h2>So einfach geht's</h2>
+</div>
+<div class="steps">
+<div class="step">
+<h3>Erstgespräch</h3>
+<p>Wir besprechen kurz Ihre Einrichtung oder Ihr Programm, die Zielgruppe und was Sie brauchen. Unverbindlich.</p>
+</div>
+<div class="step">
+<h3>Angebot</h3>
+<p>Sie erhalten ein klares Angebot mit Inhalten, Umfang und Preis – ohne versteckte Kosten.</p>
+</div>
+<div class="step">
+<h3>Durchführung</h3>
+<p>Schulung oder Beratung vor Ort, bei Ihnen als Veranstalter oder online – praxisnah und mit Bescheinigung.</p>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section contact" id="kontakt">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Kontakt</div>
-      <h2>Vereinbaren Sie ein unverbindliches Erstgespräch</h2>
-      <p>Schreiben Sie mir kurz, um welche Einrichtung oder welches Fortbildungsprogramm und welches Thema es geht. Ich melde mich zeitnah bei Ihnen.</p>
-    </div>
-    <div class="contact-list">
-      <div><span>E-Mail</span> <a class="contact-link" href="mailto:hyg.sambataro@web.de">hyg.sambataro@web.de</a></div>
-      <div><span>Mobil</span> <a class="contact-link" href="tel:+491774159981">0177 4159981</a></div>
-      <div><span>Instagram</span> <a class="contact-link" href="https://www.instagram.com/hygiene.compliance" target="_blank" rel="noopener">@hygiene.compliance</a></div>
-      <div><span>LinkedIn</span> <a class="contact-link" href="https://www.linkedin.com/in/lisa-sambataro-5930b838b/" target="_blank" rel="noopener">Lisa Sambataro</a></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Kontakt</div>
+<h2>Vereinbaren Sie ein unverbindliches Erstgespräch</h2>
+<p>Schreiben Sie mir kurz, um welche Einrichtung oder welches Fortbildungsprogramm und welches Thema es geht. Ich melde mich zeitnah bei Ihnen.</p>
+</div>
+<div class="contact-list">
+<div><span>E-Mail</span> <a class="contact-link" href="mailto:hyg.sambataro@web.de">hyg.sambataro@web.de</a></div>
+<div><span>Mobil</span> <a class="contact-link" href="tel:+491774159981">0177 4159981</a></div>
+<div><span>Instagram</span> <a class="contact-link" href="https://www.instagram.com/hygiene.compliance" target="_blank" rel="noopener">@hygiene.compliance</a></div>
+<div><span>LinkedIn</span> <a class="contact-link" href="https://www.linkedin.com/in/lisa-sambataro-5930b838b/" target="_blank" rel="noopener">Lisa Sambataro</a></div>
+</div>
+</div>
 </section>
-
 </main>
-
 <footer class="footer">
-  © 2026 hygiene.compliance · Lisa Sambataro ·
-  <a href="impressum.html">Impressum</a> ·
-  <a href="datenschutz.html">Datenschutz</a>
+© 2026 hygiene.compliance · Lisa Sambataro ·
+<a href="impressum.html">Impressum</a> ·
+<a href="datenschutz.html">Datenschutz</a>
 </footer>
-
 <script>
 const links = document.querySelectorAll('.nav a');
 const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
 function updateNav() {
-  const pos = window.scrollY + 150;
-  let current = null;
-  sections.forEach(sec => { if (sec && sec.offsetTop <= pos) current = sec.id; });
-  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+const pos = window.scrollY + 150;
+let current = null;
+sections.forEach(sec => { if (sec && sec.offsetTop <= pos) current = sec.id; });
+links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
 }
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
 </script>
-
 </body>
 </html>
